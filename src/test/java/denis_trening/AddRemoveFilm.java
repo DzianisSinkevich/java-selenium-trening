@@ -14,7 +14,7 @@ public class AddRemoveFilm extends TestBase {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-	@Test(priority = 1)
+	@Test(priority = 1, groups = "task3")
 	public void login() throws Exception {
 		driver.get(baseUrl + "/php4dvd/");
 
@@ -37,7 +37,7 @@ public class AddRemoveFilm extends TestBase {
 		driver.findElement(By.name("submit")).click();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, groups = "task3")
 	public void openPageOfAddFilm() throws Exception {
 		for (int count = 0;; count++) {
 			if (count >= 10)
@@ -52,7 +52,7 @@ public class AddRemoveFilm extends TestBase {
 		driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3, groups = "task3")
 	public void insertInvalidData() throws Exception {
 		Thread.sleep(2000);
 		driver.findElement(By.name("name")).clear();
@@ -91,7 +91,7 @@ public class AddRemoveFilm extends TestBase {
 		driver.findElement(By.id("submit")).click();
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4, groups = "task3")
 	public void insertValidData() throws Exception {
 		driver.findElement(By.name("name")).clear();
 		driver.findElement(By.name("name")).sendKeys("My");
@@ -101,7 +101,7 @@ public class AddRemoveFilm extends TestBase {
 		Thread.sleep(1000);
 	}
 
-	@Test(priority = 30)
+	@Test(priority = 5, groups = "task3")
 	public void deleteFilm() throws Exception {
 		for (int count = 0;; count++) {
 			if (count >= 10)
@@ -120,7 +120,7 @@ public class AddRemoveFilm extends TestBase {
 		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this[\\s\\S]$"));
 	}
 
-	@Test(priority = 999)
+	@Test(priority = 999, groups = "task3")
 	public void logout() throws Exception {
 		driver.findElement(By.linkText("Log out")).click();
 		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
