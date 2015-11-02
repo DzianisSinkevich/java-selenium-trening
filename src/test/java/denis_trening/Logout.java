@@ -15,8 +15,8 @@ public class Logout extends TestBase {
 
 //	@Test(priority = 1)
 	public void testUntitled() throws Exception {
-//		driver.findElement(By.linkText("Log out")).click();
-//		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
+		driver.findElement(By.linkText("Log out")).click();
+		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
 	}
 
 	private boolean isElementPresent(By by) {
