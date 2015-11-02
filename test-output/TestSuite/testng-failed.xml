@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite]">
+  <test name="AutoQA(failed)">
+    <classes>
+      <class name="denis_trening.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testUntitled"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis_trening.LoginTest -->
+      <class name="denis_trening.InsertValidData">
+        <methods>
+          <include name="init"/>
+          <include name="testUntitled"/>
+        </methods>
+      </class> <!-- denis_trening.InsertValidData -->
+      <class name="denis_trening.InsertInvalidData">
+        <methods>
+          <include name="init"/>
+          <include name="testUntitled"/>
+        </methods>
+      </class> <!-- denis_trening.InsertInvalidData -->
+      <class name="denis_trening.Logout">
+        <methods>
+          <include name="testUntitled"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis_trening.Logout -->
+      <class name="denis_trening.DeleteFilm">
+        <methods>
+          <include name="testUntitled"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis_trening.DeleteFilm -->
+      <class name="denis_trening.OpenAddWindow">
+        <methods>
+          <include name="testUntitled"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis_trening.OpenAddWindow -->
+    </classes>
+  </test> <!-- AutoQA(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

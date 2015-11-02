@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]">
-  <parameter name="path" value="/"/>
+  <parameter name="path" value="not-found"/>
   <test name="Default test(failed)">
     <classes>
       <class name="denis_trening_pages.TestBase">
@@ -9,18 +9,38 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- denis_trening_pages.TestBase -->
-      <class name="denis_trening.LoginTest">
+      <class name="denis_trening.Test005_DeleteFilm">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis_trening.Test005_DeleteFilm -->
+      <class name="denis_trening.Test002_OpenAddWindow">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis_trening.Test002_OpenAddWindow -->
+      <class name="denis_trening.Test004_InsertValidData">
         <methods>
           <include name="testUntitled"/>
           <include name="init"/>
         </methods>
-      </class> <!-- denis_trening.LoginTest -->
-      <class name="denis_trening_pages.HomePageTest">
+      </class> <!-- denis_trening.Test004_InsertValidData -->
+      <class name="denis_trening.Test001_LoginTest">
         <methods>
-          <include name="test2"/>
-          <include name="testH1Existing"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- denis_trening_pages.HomePageTest -->
+      </class> <!-- denis_trening.Test001_LoginTest -->
+      <class name="denis_trening.Test003_InsertInvalidData">
+        <methods>
+          <include name="init"/>
+          <include name="testUntitled"/>
+        </methods>
+      </class> <!-- denis_trening.Test003_InsertInvalidData -->
+      <class name="denis_trening.Test006_Logout">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis_trening.Test006_Logout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

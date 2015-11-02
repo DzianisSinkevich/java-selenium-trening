@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12422" started-at="2015-10-26T08:47:39Z" finished-at="2015-10-26T08:47:52Z">
+  <suite name="Default suite" duration-ms="15231" started-at="2015-11-02T13:26:51Z" finished-at="2015-11-02T13:27:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12422" started-at="2015-10-26T08:47:39Z" finished-at="2015-10-26T08:47:52Z">
-      <class name="denis_trening.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis_trening.LoginTest@6b71769e]" name="init" is-config="true" duration-ms="5588" started-at="2015-10-26T11:47:39Z" finished-at="2015-10-26T11:47:45Z">
+    <test name="Default test" duration-ms="15231" started-at="2015-11-02T13:26:51Z" finished-at="2015-11-02T13:27:06Z">
+      <class name="denis_trening.AddRemoveFilm">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis_trening.AddRemoveFilm@36d64342]" name="init" is-config="true" duration-ms="5116" started-at="2015-11-02T16:26:51Z" finished-at="2015-11-02T16:26:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis_trening.LoginTest@6b71769e]" name="testUntitled" duration-ms="6811" started-at="2015-10-26T11:47:45Z" finished-at="2015-10-26T11:47:52Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:denis_trening.AddRemoveFilm@36d64342]" name="login" duration-ms="2635" started-at="2015-11-02T16:26:56Z" finished-at="2015-11-02T16:26:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis_trening.LoginTest@6b71769e]" name="tearDown" is-config="true" duration-ms="465" started-at="2015-10-26T11:47:52Z" finished-at="2015-10-26T11:47:52Z">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="openPageOfAddFilm()[pri:0, instance:denis_trening.AddRemoveFilm@36d64342]" name="openPageOfAddFilm" duration-ms="735" started-at="2015-11-02T16:26:58Z" finished-at="2015-11-02T16:26:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPageOfAddFilm -->
+        <test-method status="PASS" signature="insertInvalidData()[pri:0, instance:denis_trening.AddRemoveFilm@36d64342]" name="insertInvalidData" duration-ms="2708" started-at="2015-11-02T16:26:59Z" finished-at="2015-11-02T16:27:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertInvalidData -->
+        <test-method status="PASS" signature="insertValidData()[pri:0, instance:denis_trening.AddRemoveFilm@36d64342]" name="insertValidData" duration-ms="1702" started-at="2015-11-02T16:27:02Z" finished-at="2015-11-02T16:27:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertValidData -->
+        <test-method status="PASS" signature="deleteFilm()[pri:0, instance:denis_trening.AddRemoveFilm@36d64342]" name="deleteFilm" duration-ms="1493" started-at="2015-11-02T16:27:04Z" finished-at="2015-11-02T16:27:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteFilm -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:denis_trening.AddRemoveFilm@36d64342]" name="logout" duration-ms="821" started-at="2015-11-02T16:27:05Z" finished-at="2015-11-02T16:27:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- denis_trening.AddRemoveFilm -->
+      <class name="denis_trening.OpenAddWindow">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis_trening.OpenAddWindow@6e8dacdf]" name="tearDown" is-config="true" duration-ms="1" started-at="2015-11-02T16:27:06Z" finished-at="2015-11-02T16:27:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- denis_trening.LoginTest -->
+      </class> <!-- denis_trening.OpenAddWindow -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
