@@ -1,10 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Tests" verbose="5" data-provider-thread-count="1">
-	<test name="Test1">
-		<parameter name="path" value="/" />
+<suite name="Suite1" verbose="1" data-provider-thread-count="1"
+	preserve-order="true">
+	<test name="Test">
 		<classes>
-			<class name="denis_trening.CheckCountFilms" />
+
+			<class name="denis.trening.CheckCountFilms">
+				<methods>
+					<include name="login" />
+					<include name="checkAmount" />
+					<include name="logout" />
+				</methods>
+			</class>
 		</classes>
 	</test>
-</suite>
+</suite> 	

@@ -1,6 +1,4 @@
-package denis_trening;
-
-import static org.junit.Assert.assertTrue;
+package denis.trening;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -9,17 +7,17 @@ import org.testng.annotations.Test;
 
 import denis_trening_pages.TestBase;
 
-public class DeleteFilm extends TestBase {
+public class InsertValidData extends TestBase {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-//	@Test(priority = 10)
+//	@Test(priority = 15)
 	public void testUntitled() throws Exception {
-		driver.findElement(By.linkText("Home")).click();
-		driver.findElement(By.cssSelector("div.nocover")).click();
-		driver.findElement(By.cssSelector("img[alt=\"Remove\"]")).click();
-		// Thread.sleep(2000);
-		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this[\\s\\S]$"));
+		driver.findElement(By.name("name")).clear();
+		driver.findElement(By.name("name")).sendKeys("My");
+		driver.findElement(By.name("year")).clear();
+		driver.findElement(By.name("year")).sendKeys("111");
+		driver.findElement(By.cssSelector("img[alt=\"Save\"]")).click();
 	}
 
 	private boolean isElementPresent(By by) {

@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]">
-  <parameter name="path" value="/"/>
+  <parameter name="path" value="not-found"/>
   <test name="Default test(failed)">
     <classes>
-      <class name="denis_trening.InsertValidData">
+      <class name="denis.trening.OpenAddWindow">
         <methods>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- denis_trening.InsertValidData -->
-      <class name="denis_trening.CheckCountFilms">
+      </class> <!-- denis.trening.OpenAddWindow -->
+      <class name="denis.trening.CheckCountFilms">
         <methods>
           <include name="init"/>
         </methods>
-      </class> <!-- denis_trening.CheckCountFilms -->
-      <class name="denis_trening.AddRemoveFilm">
+      </class> <!-- denis.trening.CheckCountFilms -->
+      <class name="denis.trening.AddRemoveFilm">
         <methods>
+          <include name="deleteFilm"/>
           <include name="login"/>
+          <include name="insertInvalidData"/>
+          <include name="openPageOfAddFilm"/>
+          <include name="logout"/>
+          <include name="insertValidData"/>
           <include name="init"/>
         </methods>
-      </class> <!-- denis_trening.AddRemoveFilm -->
+      </class> <!-- denis.trening.AddRemoveFilm -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

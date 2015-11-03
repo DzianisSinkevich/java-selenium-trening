@@ -1,23 +1,30 @@
-package denis_trening;
+package denis.trening;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.testng.annotations.Test;
 
 import denis_trening_pages.TestBase;
 
-public class InsertValidData extends TestBase {
+public class OpenAddWindow extends TestBase {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-//	@Test(priority = 15)
+//	@Test(priority = 25)
 	public void testUntitled() throws Exception {
-		driver.findElement(By.name("name")).clear();
-		driver.findElement(By.name("name")).sendKeys("My");
-		driver.findElement(By.name("year")).clear();
-		driver.findElement(By.name("year")).sendKeys("111");
-		driver.findElement(By.cssSelector("img[alt=\"Save\"]")).click();
+		for (int count = 0;; count++) {
+			if (count >= 30)
+				throw new TimeoutException();
+			try {
+				driver.findElement(By.cssSelector("img[alt=\"Add movie\"]"));
+				break;
+			} catch (NoSuchElementException e) {
+			}
+			Thread.sleep(1000);
+		}
+		driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
 	}
 
 	private boolean isElementPresent(By by) {

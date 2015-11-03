@@ -1,30 +1,25 @@
-package denis_trening;
+package denis.trening;
+
+import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.testng.annotations.Test;
 
 import denis_trening_pages.TestBase;
 
-public class OpenAddWindow extends TestBase {
+public class DeleteFilm extends TestBase {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-//	@Test(priority = 25)
+//	@Test(priority = 10)
 	public void testUntitled() throws Exception {
-		for (int count = 0;; count++) {
-			if (count >= 30)
-				throw new TimeoutException();
-			try {
-				driver.findElement(By.cssSelector("img[alt=\"Add movie\"]"));
-				break;
-			} catch (NoSuchElementException e) {
-			}
-			Thread.sleep(1000);
-		}
-		driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
+		driver.findElement(By.linkText("Home")).click();
+		driver.findElement(By.cssSelector("div.nocover")).click();
+		driver.findElement(By.cssSelector("img[alt=\"Remove\"]")).click();
+		// Thread.sleep(2000);
+		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this[\\s\\S]$"));
 	}
 
 	private boolean isElementPresent(By by) {

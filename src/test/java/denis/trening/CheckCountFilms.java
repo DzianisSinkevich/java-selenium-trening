@@ -1,4 +1,4 @@
-package denis_trening;
+package denis.trening;
 
 import static org.junit.Assert.assertTrue;
 
@@ -14,7 +14,7 @@ public class CheckCountFilms extends TestBase {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-	@Test(priority = 1, groups = "task4")
+	@Test(priority = 1, groups = "test")
 	public void login() throws Exception {
 		driver.get(baseUrl + "/php4dvd/");
 
@@ -38,13 +38,14 @@ public class CheckCountFilms extends TestBase {
 
 	}
 
-	@Test(priority = 2, groups = "task4")
+	@Test(priority = 2, groups = "test")
 	public void checkAmount() throws Exception {
+		Thread.sleep(3000);
 		System.out.println("Size - " + driver.findElements(By.cssSelector("[class='movie_box']")).size());
 	}
 
-	@Test(priority = 3, groups = "task4")
-	public void testUntitled() throws Exception {
+	@Test(priority = 3, groups = "test")
+	public void logout() throws Exception {
 		driver.findElement(By.linkText("Log out")).click();
 		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
 	}

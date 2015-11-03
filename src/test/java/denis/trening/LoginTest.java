@@ -1,4 +1,4 @@
-package denis_trening;
+package denis.trening;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;

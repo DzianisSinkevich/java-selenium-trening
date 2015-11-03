@@ -1,4 +1,4 @@
-package denis_trening;
+package denis.trening;
 
 import static org.junit.Assert.assertTrue;
 
