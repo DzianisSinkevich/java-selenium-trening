@@ -1,34 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="11543" started-at="2015-11-03T12:46:07Z" finished-at="2015-11-03T12:46:18Z">
+  <suite name="Suite1" duration-ms="8562" started-at="2015-11-03T13:50:25Z" finished-at="2015-11-03T13:50:34Z">
     <groups>
       <group name="test">
-        <method signature="CheckCountFilms.checkAmount()[pri:0, instance:denis.trening.CheckCountFilms@1134affc]" name="checkAmount" class="denis.trening.CheckCountFilms"/>
-        <method signature="CheckCountFilms.login()[pri:0, instance:denis.trening.CheckCountFilms@1134affc]" name="login" class="denis.trening.CheckCountFilms"/>
-        <method signature="CheckCountFilms.logout()[pri:0, instance:denis.trening.CheckCountFilms@1134affc]" name="logout" class="denis.trening.CheckCountFilms"/>
+        <method signature="CheckCountFilms.checkAmount()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="checkAmount" class="denis.trening.CheckCountFilms"/>
+        <method signature="CheckCountFilms.login()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="login" class="denis.trening.CheckCountFilms"/>
+        <method signature="CheckCountFilms.logout()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="logout" class="denis.trening.CheckCountFilms"/>
+        <method signature="CheckCountFilms.reactions()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="reactions" class="denis.trening.CheckCountFilms"/>
+        <method signature="CheckCountFilms.search()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="search" class="denis.trening.CheckCountFilms"/>
       </group> <!-- test -->
     </groups>
-    <test name="Test" duration-ms="11543" started-at="2015-11-03T12:46:07Z" finished-at="2015-11-03T12:46:18Z">
+    <test name="Test" duration-ms="8562" started-at="2015-11-03T13:50:25Z" finished-at="2015-11-03T13:50:34Z">
       <class name="denis.trening.CheckCountFilms">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckCountFilms@1134affc]" name="init" is-config="true" duration-ms="5503" started-at="2015-11-03T15:46:07Z" finished-at="2015-11-03T15:46:12Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="init" is-config="true" duration-ms="5154" started-at="2015-11-03T16:50:25Z" finished-at="2015-11-03T16:50:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="login()[pri:0, instance:denis.trening.CheckCountFilms@1134affc]" name="login" duration-ms="2715" started-at="2015-11-03T15:46:12Z" finished-at="2015-11-03T15:46:15Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="login" duration-ms="2626" started-at="2015-11-03T16:50:30Z" finished-at="2015-11-03T16:50:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckCountFilms@1134affc]" name="checkAmount" duration-ms="3016" started-at="2015-11-03T15:46:15Z" finished-at="2015-11-03T15:46:18Z">
+        <test-method status="PASS" signature="search()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="search" duration-ms="46" started-at="2015-11-03T16:50:33Z" finished-at="2015-11-03T16:50:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="checkAmount" duration-ms="56" started-at="2015-11-03T16:50:33Z" finished-at="2015-11-03T16:50:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkAmount -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:denis.trening.CheckCountFilms@1134affc]" name="logout" duration-ms="295" started-at="2015-11-03T15:46:18Z" finished-at="2015-11-03T15:46:18Z">
+        <test-method status="PASS" signature="reactions()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="reactions" duration-ms="1" started-at="2015-11-03T16:50:33Z" finished-at="2015-11-03T16:50:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reactions -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="logout" duration-ms="667" started-at="2015-11-03T16:50:33Z" finished-at="2015-11-03T16:50:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.CheckCountFilms@1134affc]" name="tearDown" is-config="true" duration-ms="403" started-at="2015-11-03T15:46:18Z" finished-at="2015-11-03T15:46:19Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="tearDown" is-config="true" duration-ms="700" started-at="2015-11-03T16:50:34Z" finished-at="2015-11-03T16:50:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

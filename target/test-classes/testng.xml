@@ -5,11 +5,6 @@
 		<classes>
 
 			<class name="denis.trening.CheckCountFilms">
-				<methods>
-					<include name="login" />
-					<include name="checkAmount" />
-					<include name="logout" />
-				</methods>
 			</class>
 		</classes>
 	</test>

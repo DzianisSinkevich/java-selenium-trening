@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -112,6 +112,16 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.CheckCountFilms" hash-for-method="logout">logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.CheckCountFilms" hash-for-method="reactions">reactions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.CheckCountFilms" hash-for-method="search">search</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite1 -->
@@ -153,6 +163,20 @@
                   <span class="method-name">logout</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="reactions">
+                  </a> <!-- reactions -->
+                  <span class="method-name">reactions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="search">
+                  </a> <!-- search -->
+                  <span class="method-name">search</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite1-class-passed -->
         </div> <!-- panel Suite1 -->
@@ -167,13 +191,7 @@
 &lt;suite name=&quot;Suite1&quot; data-provider-thread-count=&quot;1&quot;&gt;
   &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;denis.trening.CheckCountFilms&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;login&quot;/&gt;
-          &lt;include name=&quot;checkAmount&quot;/&gt;
-          &lt;include name=&quot;logout&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- denis.trening.CheckCountFilms --&gt;
+      &lt;class name=&quot;denis.trening.CheckCountFilms&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite1 --&gt;
@@ -212,6 +230,14 @@
                 <span class="method-in-group-name">logout</span>
                 <br/>
               </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">reactions</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">search</span>
+                <br/>
+              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -229,24 +255,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkAmount')
+data.setCell(0, 1, 'login')
 data.setCell(0, 2, 'denis.trening.CheckCountFilms')
-data.setCell(0, 3, 3016);
+data.setCell(0, 3, 2626);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login')
+data.setCell(1, 1, 'logout')
 data.setCell(1, 2, 'denis.trening.CheckCountFilms')
-data.setCell(1, 3, 2715);
+data.setCell(1, 3, 667);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'logout')
+data.setCell(2, 1, 'checkAmount')
 data.setCell(2, 2, 'denis.trening.CheckCountFilms')
-data.setCell(2, 3, 295);
+data.setCell(2, 3, 56);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'search')
+data.setCell(3, 2, 'denis.trening.CheckCountFilms')
+data.setCell(3, 3, 46);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'reactions')
+data.setCell(4, 2, 'denis.trening.CheckCountFilms')
+data.setCell(4, 3, 1);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -279,19 +313,27 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">5506 ms</span>
+                <span class="method-start">5156 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">search</span>
+                <span class="method-start">7783 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkAmount</span>
-                <span class="method-start">8222 ms</span>
+                <span class="method-start">7830 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">reactions</span>
+                <span class="method-start">7886 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">logout</span>
-                <span class="method-start">11239 ms</span>
+                <span class="method-start">7887 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">11561 ms</span>
+                <span class="method-start">8584 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
