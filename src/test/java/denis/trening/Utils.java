@@ -1,19 +1,22 @@
 package denis.trening;
 
+import static org.junit.Assert.assertTrue;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
-import org.testng.annotations.Test;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 import denis_trening_pages.TestBase;
 
-public class LoginTest extends TestBase {
+public class Utils extends TestBase {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-	@Test
-	public void testUntitled() throws Exception {
+	@BeforeSuite
+	public void login() throws Exception {
 		driver.get(baseUrl + "/php4dvd/");
 
 		for (int count = 0;; count++) {
@@ -33,6 +36,12 @@ public class LoginTest extends TestBase {
 		driver.findElement(By.name("password")).clear();
 		driver.findElement(By.name("password")).sendKeys("admin");
 		driver.findElement(By.name("submit")).click();
+	}
+
+	@AfterSuite
+	public void logout() throws Exception {
+		driver.findElement(By.linkText("Log out")).click();
+		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
 	}
 
 	private boolean isElementPresent(By by) {

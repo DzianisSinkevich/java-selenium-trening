@@ -13,7 +13,7 @@ public class Logout extends TestBase {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-//	@Test(priority = 1)
+	@Test
 	public void testUntitled() throws Exception {
 		driver.findElement(By.linkText("Log out")).click();
 		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));

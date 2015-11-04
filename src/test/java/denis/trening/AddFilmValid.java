@@ -10,8 +10,7 @@ import org.testng.annotations.Test;
 
 import denis_trening_pages.TestBase;
 
-public class DeleteFilm extends TestBase {
-	Integer kolFilms;
+public class AddFilmValid extends TestBase {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
@@ -36,26 +35,38 @@ public class DeleteFilm extends TestBase {
 	// driver.findElement(By.name("submit")).click();
 	// }
 
-	@Test
-	public void deleteFilm() throws Exception {
-		driver.get(baseUrl + "/php4dvd/");
-		if (amountFilms() > 0) {
-			for (int count = 0;; count++) {
-				if (count >= 10)
-					throw new TimeoutException();
-				try {
-					driver.findElement(By.cssSelector("div.nocover"));
-					break;
-				} catch (NoSuchElementException e) {
-				}
+	@Test(priority = 2)
+	public void openPageOfAddFilm() throws Exception {
+		driver.findElement(By.linkText("Home")).click();
+		for (int count = 0;; count++) {
+			if (count >= 10)
+				throw new TimeoutException();
+			try {
+				driver.findElement(By.cssSelector("img[alt=\"Add movie\"]"));
+				break;
+			} catch (NoSuchElementException e) {
 			}
-			driver.findElement(By.cssSelector("div.nocover")).click();
-			driver.findElement(By.cssSelector("img[alt=\"Remove\"]")).click();
-			assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this[\\s\\S]$"));
-			System.out.println("Film is deleted");
-		} else {
-			System.out.println("Not found any film");
 		}
+		driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
+	}
+
+	@Test(priority = 4)
+	public void insertValidData() throws Exception {
+		for (int count = 0;; count++) {
+			if (count >= 10)
+				throw new TimeoutException();
+			try {
+				driver.findElement(By.name("name"));
+				break;
+			} catch (NoSuchElementException e) {
+			}
+		}
+		driver.findElement(By.name("name")).clear();
+		driver.findElement(By.name("name")).sendKeys("My");
+		driver.findElement(By.name("year")).clear();
+		driver.findElement(By.name("year")).sendKeys("111");
+		driver.findElement(By.cssSelector("img[alt=\"Save\"]")).click();
+		System.out.println("Film is created");
 	}
 
 	// @Test(priority = 999)
@@ -64,22 +75,6 @@ public class DeleteFilm extends TestBase {
 	// assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to
 	// log out[\\s\\S]$"));
 	// }
-
-	public Integer amountFilms() throws Exception {
-		for (int count = 0;; count++) {
-			if (count >= 10)
-				throw new TimeoutException();
-			try {
-				driver.findElement(By.id("results"));
-				break;
-			} catch (NoSuchElementException e) {
-			}
-			Thread.sleep(1000);
-		}
-		kolFilms = driver.findElements(By.cssSelector("[class^='movie_box']")).size();
-		System.out.println("Amount of films  - " + kolFilms);
-		return kolFilms;
-	}
 
 	private boolean isElementPresent(By by) {
 		try {

@@ -1,48 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="8562" started-at="2015-11-03T13:50:25Z" finished-at="2015-11-03T13:50:34Z">
+  <suite name="Suite1" duration-ms="13523" started-at="2015-11-04T08:31:06Z" finished-at="2015-11-04T08:31:20Z">
     <groups>
-      <group name="test">
-        <method signature="CheckCountFilms.checkAmount()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="checkAmount" class="denis.trening.CheckCountFilms"/>
-        <method signature="CheckCountFilms.login()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="login" class="denis.trening.CheckCountFilms"/>
-        <method signature="CheckCountFilms.logout()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="logout" class="denis.trening.CheckCountFilms"/>
-        <method signature="CheckCountFilms.reactions()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="reactions" class="denis.trening.CheckCountFilms"/>
-        <method signature="CheckCountFilms.search()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="search" class="denis.trening.CheckCountFilms"/>
-      </group> <!-- test -->
     </groups>
-    <test name="Test" duration-ms="8562" started-at="2015-11-03T13:50:25Z" finished-at="2015-11-03T13:50:34Z">
-      <class name="denis.trening.CheckCountFilms">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="init" is-config="true" duration-ms="5154" started-at="2015-11-03T16:50:25Z" finished-at="2015-11-03T16:50:30Z">
+    <test name="Test000_Login" duration-ms="8560" started-at="2015-11-04T08:31:06Z" finished-at="2015-11-04T08:31:15Z">
+      <class name="denis.trening.LoginTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="init" is-config="true" duration-ms="5989" started-at="2015-11-04T11:31:06Z" finished-at="2015-11-04T11:31:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="login()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="login" duration-ms="2626" started-at="2015-11-03T16:50:30Z" finished-at="2015-11-03T16:50:33Z">
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="testUntitled" duration-ms="2558" started-at="2015-11-04T11:31:12Z" finished-at="2015-11-04T11:31:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="search()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="search" duration-ms="46" started-at="2015-11-03T16:50:33Z" finished-at="2015-11-03T16:50:33Z">
+        </test-method> <!-- testUntitled -->
+      </class> <!-- denis.trening.LoginTest -->
+    </test> <!-- Test000_Login -->
+    <test name="Test001_AddFilmValidData" duration-ms="1318" started-at="2015-11-04T08:31:15Z" finished-at="2015-11-04T08:31:16Z">
+      <class name="denis.trening.AddFilmValid">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="init" is-config="true" duration-ms="15" started-at="2015-11-04T11:31:15Z" finished-at="2015-11-04T11:31:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="checkAmount" duration-ms="56" started-at="2015-11-03T16:50:33Z" finished-at="2015-11-03T16:50:33Z">
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="openPageOfAddFilm()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="openPageOfAddFilm" duration-ms="977" started-at="2015-11-04T11:31:15Z" finished-at="2015-11-04T11:31:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkAmount -->
-        <test-method status="PASS" signature="reactions()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="reactions" duration-ms="1" started-at="2015-11-03T16:50:33Z" finished-at="2015-11-03T16:50:33Z">
+        </test-method> <!-- openPageOfAddFilm -->
+        <test-method status="PASS" signature="insertValidData()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="insertValidData" duration-ms="323" started-at="2015-11-04T11:31:16Z" finished-at="2015-11-04T11:31:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- reactions -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="logout" duration-ms="667" started-at="2015-11-03T16:50:33Z" finished-at="2015-11-03T16:50:34Z">
+        </test-method> <!-- insertValidData -->
+      </class> <!-- denis.trening.AddFilmValid -->
+    </test> <!-- Test001_AddFilmValidData -->
+    <test name="Test002_AddFilmInvalidData" duration-ms="1618" started-at="2015-11-04T08:31:16Z" finished-at="2015-11-04T08:31:18Z">
+      <class name="denis.trening.AddFilmInvalid">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmInvalid@2d6e8792]" name="init" is-config="true" duration-ms="55" started-at="2015-11-04T11:31:16Z" finished-at="2015-11-04T11:31:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.CheckCountFilms@2c8d66b2]" name="tearDown" is-config="true" duration-ms="700" started-at="2015-11-03T16:50:34Z" finished-at="2015-11-03T16:50:35Z">
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="openPageOfAddFilm()[pri:0, instance:denis.trening.AddFilmInvalid@2d6e8792]" name="openPageOfAddFilm" duration-ms="829" started-at="2015-11-04T11:31:16Z" finished-at="2015-11-04T11:31:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPageOfAddFilm -->
+        <test-method status="PASS" signature="insertInvalidData()[pri:0, instance:denis.trening.AddFilmInvalid@2d6e8792]" name="insertInvalidData" duration-ms="733" started-at="2015-11-04T11:31:17Z" finished-at="2015-11-04T11:31:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertInvalidData -->
+      </class> <!-- denis.trening.AddFilmInvalid -->
+    </test> <!-- Test002_AddFilmInvalidData -->
+    <test name="Test003_DeleteFilm" duration-ms="1283" started-at="2015-11-04T08:31:18Z" finished-at="2015-11-04T08:31:19Z">
+      <class name="denis.trening.DeleteFilm">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.DeleteFilm@6442b0a6]" name="init" is-config="true" duration-ms="20" started-at="2015-11-04T11:31:18Z" finished-at="2015-11-04T11:31:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="deleteFilm()[pri:0, instance:denis.trening.DeleteFilm@6442b0a6]" name="deleteFilm" duration-ms="1262" started-at="2015-11-04T11:31:18Z" finished-at="2015-11-04T11:31:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteFilm -->
+      </class> <!-- denis.trening.DeleteFilm -->
+    </test> <!-- Test003_DeleteFilm -->
+    <test name="Test999_Logout" duration-ms="719" started-at="2015-11-04T08:31:19Z" finished-at="2015-11-04T08:31:20Z">
+      <class name="denis.trening.Logout">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.Logout@1554909b]" name="init" is-config="true" duration-ms="544" started-at="2015-11-04T11:31:19Z" finished-at="2015-11-04T11:31:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.Logout@1554909b]" name="testUntitled" duration-ms="174" started-at="2015-11-04T11:31:19Z" finished-at="2015-11-04T11:31:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.Logout@1554909b]" name="tearDown" is-config="true" duration-ms="376" started-at="2015-11-04T11:31:20Z" finished-at="2015-11-04T11:31:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- denis.trening.CheckCountFilms -->
-    </test> <!-- Test -->
+      </class> <!-- denis.trening.Logout -->
+    </test> <!-- Test999_Logout -->
   </suite> <!-- Suite1 -->
 </testng-results>
