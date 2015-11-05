@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite1">
-              <span class="suite-name border-failed">Suite1</span>
+              <span class="suite-name border-passed">Suite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite1">
-                    <span class="test-stats">5 tests</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,26 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods, 2 failed,   8 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite1" class="hide-methods failed suite-Suite1"> (hide)</a> <!-- hide-methods failed suite-Suite1 -->
-                      <a href="#" panel-name="suite-Suite1" class="show-methods failed suite-Suite1"> (show)</a> <!-- show-methods failed suite-Suite1 -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite1">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.AddFilmInvalid" hash-for-method="insertEpmtyField">insertEpmtyField</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.AddFilmInvalid" hash-for-method="insertInvalidData">insertInvalidData</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite1 -->
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -125,12 +106,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.AddFilmInvalid" hash-for-method="checkOfAdding">checkOfAdding</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.AddFilmValid" hash-for-method="checkOfAdding">checkOfAdding</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.DeleteFilm" hash-for-method="deleteFilm">deleteFilm</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.AddFilmValid" hash-for-method="insertValidData">insertValidData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -145,7 +126,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.AddFilmInvalid" hash-for-method="openPageOfAddFilm">openPageOfAddFilm</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.AddFilmValid" hash-for-method="openPageOfAddFilm">openPageOfAddFilm</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -170,47 +151,17 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite1" class="panel Suite1">
-          <div class="suite-Suite1-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">denis.trening.AddFilmInvalid</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="insertEpmtyField">
-                  </a> <!-- insertEpmtyField -->
-                  <span class="method-name">insertEpmtyField</span>
-                  <div class="stack-trace">java.lang.AssertionError
-	at denis.trening.AddFilmInvalid.insertEpmtyField(AddFilmInvalid.java:80)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="insertInvalidData">
-                  </a> <!-- insertInvalidData -->
-                  <span class="method-name">insertInvalidData</span>
-                  <div class="stack-trace">java.lang.AssertionError
-	at denis.trening.AddFilmInvalid.insertInvalidData(AddFilmInvalid.java:64)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-failed -->
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">denis.trening.DeleteFilm</span>
+              <span class="class-name">denis.trening.Logout</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="deleteFilm">
-                  </a> <!-- deleteFilm -->
-                  <span class="method-name">deleteFilm</span>
+                  <a name="testUntitled">
+                  </a> <!-- testUntitled -->
+                  <span class="method-name">testUntitled</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -230,9 +181,30 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="checkOfAdding">
+                  </a> <!-- checkOfAdding -->
+                  <span class="method-name">checkOfAdding</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="insertValidData">
                   </a> <!-- insertValidData -->
                   <span class="method-name">insertValidData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="insertValidData">
+                  </a> <!-- insertValidData -->
+                  <span class="method-name">insertValidData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="openPageOfAddFilm">
+                  </a> <!-- openPageOfAddFilm -->
+                  <span class="method-name">openPageOfAddFilm</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -259,43 +231,6 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite1-class-passed -->
-          <div class="suite-Suite1-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">denis.trening.AddFilmInvalid</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkOfAdding">
-                  </a> <!-- checkOfAdding -->
-                  <span class="method-name">checkOfAdding</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="openPageOfAddFilm">
-                  </a> <!-- openPageOfAddFilm -->
-                  <span class="method-name">openPageOfAddFilm</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-passed -->
-          <div class="suite-Suite1-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">denis.trening.Logout</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled">
-                  </a> <!-- testUntitled -->
-                  <span class="method-name">testUntitled</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-passed -->
         </div> <!-- panel Suite1 -->
         <div panel-name="test-xml-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -311,21 +246,16 @@
       &lt;class name=&quot;denis.trening.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test000_Login --&gt;
-  &lt;test name=&quot;Test001_AddFilmValidData&quot;&gt;
+  &lt;test name=&quot;Test001_CheckSearchNotFound&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;denis.trening.AddFilmValid&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test001_AddFilmValidData --&gt;
-  &lt;test name=&quot;Test002_AddFilmInvalidData&quot;&gt;
+  &lt;/test&gt; &lt;!-- Test001_CheckSearchNotFound --&gt;
+  &lt;test name=&quot;Test002_CheckSearchAreFound&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;denis.trening.AddFilmInvalid&quot;/&gt;
+      &lt;class name=&quot;denis.trening.AddFilmValid&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test002_AddFilmInvalidData --&gt;
-  &lt;test name=&quot;Test003_DeleteFilm&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;denis.trening.DeleteFilm&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test003_DeleteFilm --&gt;
+  &lt;/test&gt; &lt;!-- Test002_CheckSearchAreFound --&gt;
   &lt;test name=&quot;Test999_Logout&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;denis.trening.Logout&quot;/&gt;
@@ -345,13 +275,10 @@
                 <span class="test-name">Test000_Login (1 class)</span>
               </li>
               <li>
-                <span class="test-name">Test001_AddFilmValidData (1 class)</span>
+                <span class="test-name">Test001_CheckSearchNotFound (1 class)</span>
               </li>
               <li>
-                <span class="test-name">Test002_AddFilmInvalidData (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Test003_DeleteFilm (1 class)</span>
+                <span class="test-name">Test002_CheckSearchAreFound (1 class)</span>
               </li>
               <li>
                 <span class="test-name">Test999_Logout (1 class)</span>
@@ -380,52 +307,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testUntitled')
 data.setCell(0, 2, 'denis.trening.LoginTest')
-data.setCell(0, 3, 2696);
+data.setCell(0, 3, 2784);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'deleteFilm')
-data.setCell(1, 2, 'denis.trening.DeleteFilm')
-data.setCell(1, 3, 1410);
+data.setCell(1, 1, 'openPageOfAddFilm')
+data.setCell(1, 2, 'denis.trening.AddFilmValid')
+data.setCell(1, 3, 1379);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'openPageOfAddFilm')
 data.setCell(2, 2, 'denis.trening.AddFilmValid')
-data.setCell(2, 3, 917);
+data.setCell(2, 3, 945);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'openPageOfAddFilm')
-data.setCell(3, 2, 'denis.trening.AddFilmInvalid')
-data.setCell(3, 3, 743);
+data.setCell(3, 1, 'insertValidData')
+data.setCell(3, 2, 'denis.trening.AddFilmValid')
+data.setCell(3, 3, 770);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'insertValidData')
 data.setCell(4, 2, 'denis.trening.AddFilmValid')
-data.setCell(4, 3, 645);
+data.setCell(4, 3, 729);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'checkOfAdding')
-data.setCell(5, 2, 'denis.trening.AddFilmInvalid')
-data.setCell(5, 3, 522);
+data.setCell(5, 1, 'testUntitled')
+data.setCell(5, 2, 'denis.trening.Logout')
+data.setCell(5, 3, 481);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'insertInvalidData')
-data.setCell(6, 2, 'denis.trening.AddFilmInvalid')
-data.setCell(6, 3, 520);
+data.setCell(6, 1, 'checkOfAdding')
+data.setCell(6, 2, 'denis.trening.AddFilmValid')
+data.setCell(6, 3, 448);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testUntitled')
-data.setCell(7, 2, 'denis.trening.Logout')
-data.setCell(7, 3, 461);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'insertEpmtyField')
-data.setCell(8, 2, 'denis.trening.AddFilmInvalid')
-data.setCell(8, 3, 413);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'checkOfAdding')
-data.setCell(9, 2, 'denis.trening.AddFilmValid')
-data.setCell(9, 3, 369);
+data.setCell(7, 1, 'checkOfAdding')
+data.setCell(7, 2, 'denis.trening.AddFilmValid')
+data.setCell(7, 3, 415);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -458,79 +377,57 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled</span>
-                <span class="method-start">6530 ms</span>
+                <span class="method-start">6560 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">denis.trening.AddFilmValid</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">9247 ms</span>
+                <span class="method-start">9369 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">openPageOfAddFilm</span>
-                <span class="method-start">9271 ms</span>
+                <span class="method-start">9416 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">insertValidData</span>
-                <span class="method-start">10189 ms</span>
+                <span class="method-start">10797 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkOfAdding</span>
-                <span class="method-start">10843 ms</span>
+                <span class="method-start">11530 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">denis.trening.AddFilmInvalid</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">11215 ms</span>
+                <span class="method-start">11982 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">openPageOfAddFilm</span>
-                <span class="method-start">11225 ms</span>
+                <span class="method-start">12009 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">insertEpmtyField</span>
-                <span class="method-start">11969 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">insertInvalidData</span>
-                <span class="method-start">12384 ms</span>
+                <span class="method-name">insertValidData</span>
+                <span class="method-start">12955 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkOfAdding</span>
-                <span class="method-start">12905 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">denis.trening.DeleteFilm</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">13433 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">deleteFilm</span>
-                <span class="method-start">13444 ms</span>
+                <span class="method-start">13725 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">denis.trening.Logout</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">14859 ms</span>
+                <span class="method-start">14144 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled</span>
-                <span class="method-start">14869 ms</span>
+                <span class="method-start">14155 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15332 ms</span>
+                <span class="method-start">14640 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

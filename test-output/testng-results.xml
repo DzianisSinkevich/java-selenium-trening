@@ -1,151 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="10" passed="8">
+<testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="15337" started-at="2015-11-05T13:15:54Z" finished-at="2015-11-05T13:16:09Z">
+  <suite name="Suite1" duration-ms="14647" started-at="2015-11-05T13:35:13Z" finished-at="2015-11-05T13:35:28Z">
     <groups>
     </groups>
-    <test name="Test000_Login" duration-ms="9235" started-at="2015-11-05T13:15:54Z" finished-at="2015-11-05T13:16:03Z">
+    <test name="Test000_Login" duration-ms="9357" started-at="2015-11-05T13:35:13Z" finished-at="2015-11-05T13:35:22Z">
       <class name="denis.trening.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="init" is-config="true" duration-ms="6528" started-at="2015-11-05T16:15:54Z" finished-at="2015-11-05T16:16:00Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="init" is-config="true" duration-ms="6558" started-at="2015-11-05T16:35:13Z" finished-at="2015-11-05T16:35:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="testUntitled" duration-ms="2696" started-at="2015-11-05T16:16:00Z" finished-at="2015-11-05T16:16:03Z">
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="testUntitled" duration-ms="2784" started-at="2015-11-05T16:35:20Z" finished-at="2015-11-05T16:35:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
       </class> <!-- denis.trening.LoginTest -->
     </test> <!-- Test000_Login -->
-    <test name="Test001_AddFilmValidData" duration-ms="1966" started-at="2015-11-05T13:16:03Z" finished-at="2015-11-05T13:16:05Z">
+    <test name="Test001_CheckSearchNotFound" duration-ms="2610" started-at="2015-11-05T13:35:22Z" finished-at="2015-11-05T13:35:25Z">
       <class name="denis.trening.AddFilmValid">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="init" is-config="true" duration-ms="23" started-at="2015-11-05T16:16:03Z" finished-at="2015-11-05T16:16:03Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="init" is-config="true" duration-ms="47" started-at="2015-11-05T16:35:22Z" finished-at="2015-11-05T16:35:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="openPageOfAddFilm()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="openPageOfAddFilm" duration-ms="917" started-at="2015-11-05T16:16:03Z" finished-at="2015-11-05T16:16:04Z">
+        <test-method status="PASS" signature="openPageOfAddFilm()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="openPageOfAddFilm" duration-ms="1379" started-at="2015-11-05T16:35:23Z" finished-at="2015-11-05T16:35:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openPageOfAddFilm -->
-        <test-method status="PASS" signature="insertValidData()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="insertValidData" duration-ms="645" started-at="2015-11-05T16:16:04Z" finished-at="2015-11-05T16:16:05Z">
+        <test-method status="PASS" signature="insertValidData()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="insertValidData" duration-ms="729" started-at="2015-11-05T16:35:24Z" finished-at="2015-11-05T16:35:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- insertValidData -->
-        <test-method status="PASS" signature="checkOfAdding()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="checkOfAdding" duration-ms="369" started-at="2015-11-05T16:16:05Z" finished-at="2015-11-05T16:16:05Z">
+        <test-method status="PASS" signature="checkOfAdding()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="checkOfAdding" duration-ms="448" started-at="2015-11-05T16:35:25Z" finished-at="2015-11-05T16:35:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkOfAdding -->
       </class> <!-- denis.trening.AddFilmValid -->
-    </test> <!-- Test001_AddFilmValidData -->
-    <test name="Test002_AddFilmInvalidData" duration-ms="2213" started-at="2015-11-05T13:16:05Z" finished-at="2015-11-05T13:16:07Z">
-      <class name="denis.trening.AddFilmInvalid">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmInvalid@2812cbfa]" name="init" is-config="true" duration-ms="10" started-at="2015-11-05T16:16:05Z" finished-at="2015-11-05T16:16:05Z">
+    </test> <!-- Test001_CheckSearchNotFound -->
+    <test name="Test002_CheckSearchAreFound" duration-ms="2159" started-at="2015-11-05T13:35:25Z" finished-at="2015-11-05T13:35:27Z">
+      <class name="denis.trening.AddFilmValid">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmValid@17f6480]" name="init" is-config="true" duration-ms="27" started-at="2015-11-05T16:35:25Z" finished-at="2015-11-05T16:35:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="openPageOfAddFilm()[pri:0, instance:denis.trening.AddFilmInvalid@2812cbfa]" name="openPageOfAddFilm" duration-ms="743" started-at="2015-11-05T16:16:05Z" finished-at="2015-11-05T16:16:06Z">
+        <test-method status="PASS" signature="openPageOfAddFilm()[pri:0, instance:denis.trening.AddFilmValid@17f6480]" name="openPageOfAddFilm" duration-ms="945" started-at="2015-11-05T16:35:25Z" finished-at="2015-11-05T16:35:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openPageOfAddFilm -->
-        <test-method status="FAIL" signature="insertEpmtyField()[pri:0, instance:denis.trening.AddFilmInvalid@2812cbfa]" name="insertEpmtyField" duration-ms="413" started-at="2015-11-05T16:16:06Z" finished-at="2015-11-05T16:16:06Z">
-          <exception class="java.lang.AssertionError">
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError
-	at denis.trening.AddFilmInvalid.insertEpmtyField(AddFilmInvalid.java:80)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1032)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="insertValidData()[pri:0, instance:denis.trening.AddFilmValid@17f6480]" name="insertValidData" duration-ms="770" started-at="2015-11-05T16:35:26Z" finished-at="2015-11-05T16:35:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- insertEpmtyField -->
-        <test-method status="FAIL" signature="insertInvalidData()[pri:0, instance:denis.trening.AddFilmInvalid@2812cbfa]" name="insertInvalidData" duration-ms="520" started-at="2015-11-05T16:16:06Z" finished-at="2015-11-05T16:16:07Z">
-          <exception class="java.lang.AssertionError">
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError
-	at denis.trening.AddFilmInvalid.insertInvalidData(AddFilmInvalid.java:64)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1032)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- insertInvalidData -->
-        <test-method status="PASS" signature="checkOfAdding()[pri:0, instance:denis.trening.AddFilmInvalid@2812cbfa]" name="checkOfAdding" duration-ms="522" started-at="2015-11-05T16:16:07Z" finished-at="2015-11-05T16:16:07Z">
+        </test-method> <!-- insertValidData -->
+        <test-method status="PASS" signature="checkOfAdding()[pri:0, instance:denis.trening.AddFilmValid@17f6480]" name="checkOfAdding" duration-ms="415" started-at="2015-11-05T16:35:27Z" finished-at="2015-11-05T16:35:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkOfAdding -->
-      </class> <!-- denis.trening.AddFilmInvalid -->
-    </test> <!-- Test002_AddFilmInvalidData -->
-    <test name="Test003_DeleteFilm" duration-ms="1423" started-at="2015-11-05T13:16:07Z" finished-at="2015-11-05T13:16:09Z">
-      <class name="denis.trening.DeleteFilm">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.DeleteFilm@60f82f98]" name="init" is-config="true" duration-ms="11" started-at="2015-11-05T16:16:07Z" finished-at="2015-11-05T16:16:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="deleteFilm()[pri:0, instance:denis.trening.DeleteFilm@60f82f98]" name="deleteFilm" duration-ms="1410" started-at="2015-11-05T16:16:07Z" finished-at="2015-11-05T16:16:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteFilm -->
-      </class> <!-- denis.trening.DeleteFilm -->
-    </test> <!-- Test003_DeleteFilm -->
-    <test name="Test999_Logout" duration-ms="471" started-at="2015-11-05T13:16:09Z" finished-at="2015-11-05T13:16:09Z">
+      </class> <!-- denis.trening.AddFilmValid -->
+    </test> <!-- Test002_CheckSearchAreFound -->
+    <test name="Test999_Logout" duration-ms="493" started-at="2015-11-05T13:35:27Z" finished-at="2015-11-05T13:35:28Z">
       <class name="denis.trening.Logout">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.Logout@6bf256fa]" name="init" is-config="true" duration-ms="10" started-at="2015-11-05T16:16:09Z" finished-at="2015-11-05T16:16:09Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.Logout@4411d970]" name="init" is-config="true" duration-ms="11" started-at="2015-11-05T16:35:27Z" finished-at="2015-11-05T16:35:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.Logout@6bf256fa]" name="testUntitled" duration-ms="461" started-at="2015-11-05T16:16:09Z" finished-at="2015-11-05T16:16:09Z">
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.Logout@4411d970]" name="testUntitled" duration-ms="481" started-at="2015-11-05T16:35:27Z" finished-at="2015-11-05T16:35:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.Logout@6bf256fa]" name="tearDown" is-config="true" duration-ms="257" started-at="2015-11-05T16:16:09Z" finished-at="2015-11-05T16:16:09Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.Logout@4411d970]" name="tearDown" is-config="true" duration-ms="349" started-at="2015-11-05T16:35:28Z" finished-at="2015-11-05T16:35:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

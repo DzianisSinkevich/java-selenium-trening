@@ -28,12 +28,12 @@ public class AddFilmInvalid extends TestBase {
 			}
 		}
 		kolFilmsOld = driver.findElements(By.cssSelector("[class^='movie_box']")).size();
-		driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
+		
 	}
 
 	@Test(priority = 2)
 	public void insertInvalidData() throws Exception {
-
+		driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
 		for (int count = 0;; count++) {
 			if (count >= 10)
 				throw new TimeoutException();

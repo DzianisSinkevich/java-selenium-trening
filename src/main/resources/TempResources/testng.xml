@@ -8,16 +8,23 @@
 		</classes>
 	</test>
 
-	<test name="Test001_CheckSearchNotFound">
+	<test name="Test001_AddFilmValidData">
 		<classes>
 			<class name="denis.trening.AddFilmValid">
 			</class>
 		</classes>
 	</test>
-	
-	<test name="Test002_CheckSearchAreFound">
+
+	<test name="Test002_AddFilmInvalidData">
 		<classes>
-			<class name="denis.trening.AddFilmValid">
+			<class name="denis.trening.AddFilmInvalid">
+			</class>
+		</classes>
+	</test>
+
+	<test name="Test003_DeleteFilm">
+		<classes>
+			<class name="denis.trening.DeleteFilm">
 			</class>
 		</classes>
 	</test>

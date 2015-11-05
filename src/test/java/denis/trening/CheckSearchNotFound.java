@@ -1,7 +1,5 @@
 package denis.trening;
 
-import static org.junit.Assert.assertTrue;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,38 +9,26 @@ import org.testng.annotations.Test;
 
 import denis_trening_pages.TestBase;
 
-public class CheckCountFilms extends TestBase {
+public class CheckSearchNotFound extends TestBase {
 	int kolFilms = 0;
+
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-	@Test(priority = 1, groups = "test")
-	public void login() throws Exception {
-		driver.get(baseUrl + "/php4dvd/");
-
+	@Test(priority = 2, groups = "test")
+	public void search() throws Exception {
+		driver.findElement(By.linkText("Home")).click();
 		for (int count = 0;; count++) {
-			if (count >= 30)
+			if (count >= 10)
 				throw new TimeoutException();
 			try {
-				driver.findElement(By.name("submit"));
+				driver.findElement(By.id("q"));
 				break;
 			} catch (NoSuchElementException e) {
 			}
-			Thread.sleep(1000);
 		}
-		Thread.sleep(500);
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys("admin");
-
-		driver.findElement(By.name("password")).clear();
-		driver.findElement(By.name("password")).sendKeys("admin");
-		driver.findElement(By.name("submit")).click();
-
-	}
-
-	@Test(priority = 2, groups = "test")
-	public void search() throws Exception {
-		driver.findElement(By.id("q")).sendKeys("film1" + Keys.ENTER);
+		
+		driver.findElement(By.id("q")).sendKeys("ForNotFoundFilm" + Keys.ENTER);
 	}
 
 	@Test(priority = 3, groups = "test")
@@ -55,10 +41,12 @@ public class CheckCountFilms extends TestBase {
 				break;
 			} catch (NoSuchElementException e) {
 			}
-			Thread.sleep(1000);
 		}
 		kolFilms = driver.findElements(By.cssSelector("[class^='movie_box']")).size();
-		System.out.println("Size - " + kolFilms);
+		if (kolFilms == 0) {
+			System.out.println("ERROR - Film is not found. Amount of films = " + kolFilms);
+		}
+		assert(kolFilms == 0);
 	}
 
 	@Test(priority = 4, groups = "test")
@@ -68,12 +56,6 @@ public class CheckCountFilms extends TestBase {
 		} else {
 			System.out.println("Film not in DB");
 		}
-	}
-
-	@Test(priority = 5, groups = "test")
-	public void logout() throws Exception {
-		driver.findElement(By.linkText("Log out")).click();
-		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
 	}
 
 	private boolean isElementPresent(By by) {
