@@ -11,34 +11,25 @@ import org.testng.annotations.Test;
 import denis_trening_pages.TestBase;
 
 public class DeleteFilm extends TestBase {
-	Integer kolFilms;
+	int kolFilms = 0;
+	int kolFilmsOld = 0;
+
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
-
-	// @Test(priority = 1)
-	// public void login() throws Exception {
-	// driver.get(baseUrl + "/php4dvd/");
-	//
-	// for (int count = 0;; count++) {
-	// if (count >= 30)
-	// throw new TimeoutException();
-	// try {
-	// driver.findElement(By.name("submit"));
-	// break;
-	// } catch (NoSuchElementException e) {
-	// }
-	// }
-	// driver.findElement(By.id("username")).clear();
-	// driver.findElement(By.id("username")).sendKeys("admin");
-	//
-	// driver.findElement(By.name("password")).clear();
-	// driver.findElement(By.name("password")).sendKeys("admin");
-	// driver.findElement(By.name("submit")).click();
-	// }
 
 	@Test
 	public void deleteFilm() throws Exception {
 		driver.get(baseUrl + "/php4dvd/");
+		for (int count = 0;; count++) {
+			if (count >= 10)
+				throw new TimeoutException();
+			try {
+				driver.findElement(By.cssSelector("img[alt=\"Add movie\"]"));
+				break;
+			} catch (NoSuchElementException e) {
+			}
+		}
+		kolFilmsOld = driver.findElements(By.cssSelector("[class^='movie_box']")).size();
 		if (amountFilms() > 0) {
 			for (int count = 0;; count++) {
 				if (count >= 10)
@@ -52,18 +43,10 @@ public class DeleteFilm extends TestBase {
 			driver.findElement(By.cssSelector("div.nocover")).click();
 			driver.findElement(By.cssSelector("img[alt=\"Remove\"]")).click();
 			assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this[\\s\\S]$"));
-			System.out.println("Film is deleted");
-		} else {
-			System.out.println("Not found any film");
 		}
+		kolFilms = driver.findElements(By.cssSelector("[class^='movie_box']")).size();
+		assert(kolFilms == kolFilmsOld - 1);
 	}
-
-	// @Test(priority = 999)
-	// public void logout() throws Exception {
-	// driver.findElement(By.linkText("Log out")).click();
-	// assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to
-	// log out[\\s\\S]$"));
-	// }
 
 	public Integer amountFilms() throws Exception {
 		for (int count = 0;; count++) {

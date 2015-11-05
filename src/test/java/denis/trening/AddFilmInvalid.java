@@ -1,7 +1,5 @@
 package denis.trening;
 
-import static org.junit.Assert.assertTrue;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -11,31 +9,13 @@ import org.testng.annotations.Test;
 import denis_trening_pages.TestBase;
 
 public class AddFilmInvalid extends TestBase {
+	int kolFilms = 0;
+	int kolFilmsOld = 0;
+
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-	// @Test(priority = 1)
-	// public void login() throws Exception {
-	// driver.get(baseUrl + "/php4dvd/");
-	//
-	// for (int count = 0;; count++) {
-	// if (count >= 30)
-	// throw new TimeoutException();
-	// try {
-	// driver.findElement(By.name("submit"));
-	// break;
-	// } catch (NoSuchElementException e) {
-	// }
-	// }
-	// driver.findElement(By.id("username")).clear();
-	// driver.findElement(By.id("username")).sendKeys("admin");
-	//
-	// driver.findElement(By.name("password")).clear();
-	// driver.findElement(By.name("password")).sendKeys("admin");
-	// driver.findElement(By.name("submit")).click();
-	// }
-
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void openPageOfAddFilm() throws Exception {
 		driver.findElement(By.linkText("Home")).click();
 		for (int count = 0;; count++) {
@@ -47,10 +27,11 @@ public class AddFilmInvalid extends TestBase {
 			} catch (NoSuchElementException e) {
 			}
 		}
+		kolFilmsOld = driver.findElements(By.cssSelector("[class^='movie_box']")).size();
 		driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void insertInvalidData() throws Exception {
 
 		for (int count = 0;; count++) {
@@ -67,43 +48,54 @@ public class AddFilmInvalid extends TestBase {
 		driver.findElement(By.name("year")).clear();
 		driver.findElement(By.name("year")).sendKeys("asder");
 		driver.findElement(By.cssSelector("img[alt=\"Save\"]")).click();
-		if ((driver
+		assert((driver
 				.findElement(By
 						.xpath("/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@class='content']/div[@class='addmovie']/form[@id='updateform']/table/tbody/tr[4]/td[2]/label[@class='error']"))
-				.getText()).equals("Please enter a valid number")) {
-			System.out.println("Invalid data in field 'Year' - error is rigth");
-		} else {
-			System.out.println("Invalid data in field 'Year' - error is wrong");
-		}
+				.getText()).equals("Please enter a valid number"));
 		driver.findElement(By.id("submit")).click();
 		driver.findElement(By.name("name")).clear();
 		driver.findElement(By.name("name")).sendKeys("");
 		driver.findElement(By.name("year")).clear();
 		driver.findElement(By.name("year")).sendKeys("2010");
 		driver.findElement(By.cssSelector("img[alt=\"Save\"]")).click();
-
-		if ((driver
+		assert((driver
 				.findElement(By
 						.xpath("/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@class='content']/div[@class='addmovie']/form[@id='updateform']/table/tbody/tr[2]/td[2]/label[@class='error']"))
-				.getText()).equals("This field is required")) {
-			System.out.println("Empty field 'Title' - error is rigth");
-		} else {
-			System.out.println("Empty field 'Title' - error is wrong");
-		}
-		System.out.println(driver
-				.findElement(By
-						.xpath("/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@class='content']/div[@class='addmovie']/form[@id='updateform']/table/tbody/tr[4]/td[2]/label[@class='error']"))
-				.getText());
-
+				.getText()).equals("This field is required"));
 		driver.findElement(By.id("submit")).click();
 	}
 
-	// @Test(priority = 999)
-	// public void logout() throws Exception {
-	// driver.findElement(By.linkText("Log out")).click();
-	// assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to
-	// log out[\\s\\S]$"));
-	// }
+	@Test(priority = 3)
+	public void insertEpmtyField() throws Exception {
+
+		driver.findElement(By.id("submit")).click();
+		driver.findElement(By.name("name")).clear();
+		driver.findElement(By.name("name")).sendKeys("");
+		driver.findElement(By.name("year")).clear();
+		driver.findElement(By.name("year")).sendKeys("2010");
+		driver.findElement(By.cssSelector("img[alt=\"Save\"]")).click();
+		assert((driver
+				.findElement(By
+						.xpath("/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@class='content']/div[@class='addmovie']/form[@id='updateform']/table/tbody/tr[2]/td[2]/label[@class='error']"))
+				.getText()).equals("This field is required"));
+		driver.findElement(By.id("submit")).click();
+	}
+
+	@Test(priority = 4)
+	public void checkOfAdding() throws Exception {
+		driver.findElement(By.linkText("Home")).click();
+		for (int count = 0;; count++) {
+			if (count >= 10)
+				throw new TimeoutException();
+			try {
+				driver.findElement(By.cssSelector("[class^='movie_box']"));
+				break;
+			} catch (NoSuchElementException e) {
+			}
+		}
+		kolFilms = driver.findElements(By.cssSelector("[class^='movie_box']")).size();
+		assert(kolFilms == kolFilmsOld);
+	}
 
 	private boolean isElementPresent(By by) {
 		try {

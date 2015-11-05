@@ -1,55 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite1]" data-provider-thread-count="1">
-  <test name="Test001_AddFilmValidData(failed)">
-    <classes>
-      <class name="denis.trening.AddFilmValid">
-        <methods>
-          <include name="insertValidData"/>
-          <include name="openPageOfAddFilm"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- denis.trening.AddFilmValid -->
-      <class name="denis.trening.DeleteFilm">
-        <methods>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- denis.trening.DeleteFilm -->
-    </classes>
-  </test> <!-- Test001_AddFilmValidData(failed) -->
   <test name="Test002_AddFilmInvalidData(failed)">
     <classes>
+      <class name="denis.trening.DeleteFilm">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis.trening.DeleteFilm -->
       <class name="denis.trening.AddFilmValid">
         <methods>
-          <include name="login"/>
+          <include name="init"/>
         </methods>
       </class> <!-- denis.trening.AddFilmValid -->
+      <class name="denis.trening.LoginTest">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis.trening.LoginTest -->
       <class name="denis.trening.AddFilmInvalid">
         <methods>
-          <include name="openPageOfAddFilm"/>
+          <include name="insertEpmtyField"/>
           <include name="insertInvalidData"/>
+          <include name="init"/>
         </methods>
       </class> <!-- denis.trening.AddFilmInvalid -->
-      <class name="denis.trening.DeleteFilm">
+      <class name="denis.trening.Logout">
         <methods>
           <include name="tearDown"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- denis.trening.DeleteFilm -->
+      </class> <!-- denis.trening.Logout -->
     </classes>
   </test> <!-- Test002_AddFilmInvalidData(failed) -->
-  <test name="Test003_DeleteFilm(failed)">
-    <classes>
-      <class name="denis.trening.AddFilmValid">
-        <methods>
-          <include name="login"/>
-        </methods>
-      </class> <!-- denis.trening.AddFilmValid -->
-      <class name="denis.trening.DeleteFilm">
-        <methods>
-          <include name="deleteFilm"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- denis.trening.DeleteFilm -->
-    </classes>
-  </test> <!-- Test003_DeleteFilm(failed) -->
 </suite> <!-- Failed suite [Suite1] -->
