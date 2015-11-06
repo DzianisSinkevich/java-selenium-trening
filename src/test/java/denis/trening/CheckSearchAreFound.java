@@ -36,7 +36,17 @@ public class CheckSearchAreFound extends TestBase {
 		}
 		driver.findElement(By.id("q")).clear();
 		driver.findElement(By.id("q")).sendKeys("" + Keys.ENTER);
-
+		for (int count = 0;; count++) {
+			if (count >= 10)
+				throw new TimeoutException();
+			try {
+				driver.findElement(
+						By.xpath(".//*[@id='results']/a[1]/*/div[@class='movie_cover']/div[@class='nocover']"));
+				break;
+			} catch (NoSuchElementException e) {
+			}
+			Thread.sleep(1000);
+		}
 		existName = driver
 				.findElement(By
 						.xpath("/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/a[1]/*/div[@class='title']"))
