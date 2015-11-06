@@ -2,72 +2,72 @@
 <testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="16361" started-at="2015-11-06T08:50:24Z" finished-at="2015-11-06T08:50:41Z">
+  <suite name="Suite1" duration-ms="15692" started-at="2015-11-06T08:59:09Z" finished-at="2015-11-06T08:59:25Z">
     <groups>
       <group name="test">
         <method signature="CheckSearchNotFound.checkAmount()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="checkAmount" class="denis.trening.CheckSearchNotFound"/>
         <method signature="CheckSearchNotFound.search()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="search" class="denis.trening.CheckSearchNotFound"/>
       </group> <!-- test -->
     </groups>
-    <test name="Test000_Login" duration-ms="8745" started-at="2015-11-06T08:50:24Z" finished-at="2015-11-06T08:50:33Z">
+    <test name="Test000_Login" duration-ms="7941" started-at="2015-11-06T08:59:09Z" finished-at="2015-11-06T08:59:17Z">
       <class name="denis.trening.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="init" is-config="true" duration-ms="5861" started-at="2015-11-06T11:50:24Z" finished-at="2015-11-06T11:50:30Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="init" is-config="true" duration-ms="4584" started-at="2015-11-06T11:59:09Z" finished-at="2015-11-06T11:59:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="testUntitled" duration-ms="2869" started-at="2015-11-06T11:50:30Z" finished-at="2015-11-06T11:50:33Z">
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="testUntitled" duration-ms="3344" started-at="2015-11-06T11:59:14Z" finished-at="2015-11-06T11:59:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
       </class> <!-- denis.trening.LoginTest -->
     </test> <!-- Test000_Login -->
-    <test name="Test001_CheckSearchNotFound" duration-ms="5949" started-at="2015-11-06T08:50:33Z" finished-at="2015-11-06T08:50:39Z">
+    <test name="Test001_CheckSearchNotFound" duration-ms="6028" started-at="2015-11-06T08:59:17Z" finished-at="2015-11-06T08:59:23Z">
       <class name="denis.trening.CheckSearchNotFound">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="init" is-config="true" duration-ms="26" started-at="2015-11-06T11:50:33Z" finished-at="2015-11-06T11:50:33Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="init" is-config="true" duration-ms="31" started-at="2015-11-06T11:59:17Z" finished-at="2015-11-06T11:59:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="search()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="search" duration-ms="641" started-at="2015-11-06T11:50:33Z" finished-at="2015-11-06T11:50:34Z">
+        <test-method status="PASS" signature="search()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="search" duration-ms="774" started-at="2015-11-06T11:59:17Z" finished-at="2015-11-06T11:59:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="checkAmount" duration-ms="5279" started-at="2015-11-06T11:50:34Z" finished-at="2015-11-06T11:50:39Z">
+        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="checkAmount" duration-ms="5222" started-at="2015-11-06T11:59:18Z" finished-at="2015-11-06T11:59:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkAmount -->
       </class> <!-- denis.trening.CheckSearchNotFound -->
     </test> <!-- Test001_CheckSearchNotFound -->
-    <test name="Test002_CheckSearchAreFound" duration-ms="981" started-at="2015-11-06T08:50:39Z" finished-at="2015-11-06T08:50:40Z">
+    <test name="Test002_CheckSearchAreFound" duration-ms="1055" started-at="2015-11-06T08:59:23Z" finished-at="2015-11-06T08:59:24Z">
       <class name="denis.trening.CheckSearchAreFound">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="init" is-config="true" duration-ms="22" started-at="2015-11-06T11:50:39Z" finished-at="2015-11-06T11:50:39Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="init" is-config="true" duration-ms="14" started-at="2015-11-06T11:59:23Z" finished-at="2015-11-06T11:59:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="checkOfExistingName()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="checkOfExistingName" duration-ms="871" started-at="2015-11-06T11:50:39Z" finished-at="2015-11-06T11:50:40Z">
+        <test-method status="PASS" signature="checkOfExistingName()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="checkOfExistingName" duration-ms="952" started-at="2015-11-06T11:59:23Z" finished-at="2015-11-06T11:59:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkOfExistingName -->
-        <test-method status="PASS" signature="search()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="search" duration-ms="42" started-at="2015-11-06T11:50:40Z" finished-at="2015-11-06T11:50:40Z">
+        <test-method status="PASS" signature="search()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="search" duration-ms="33" started-at="2015-11-06T11:59:24Z" finished-at="2015-11-06T11:59:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="checkAmount" duration-ms="42" started-at="2015-11-06T11:50:40Z" finished-at="2015-11-06T11:50:40Z">
+        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="checkAmount" duration-ms="54" started-at="2015-11-06T11:59:24Z" finished-at="2015-11-06T11:59:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkAmount -->
       </class> <!-- denis.trening.CheckSearchAreFound -->
     </test> <!-- Test002_CheckSearchAreFound -->
-    <test name="Test999_Logout" duration-ms="663" started-at="2015-11-06T08:50:40Z" finished-at="2015-11-06T08:50:41Z">
+    <test name="Test999_Logout" duration-ms="638" started-at="2015-11-06T08:59:24Z" finished-at="2015-11-06T08:59:25Z">
       <class name="denis.trening.Logout">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="init" is-config="true" duration-ms="20" started-at="2015-11-06T11:50:40Z" finished-at="2015-11-06T11:50:40Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="init" is-config="true" duration-ms="30" started-at="2015-11-06T11:59:24Z" finished-at="2015-11-06T11:59:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="testUntitled" duration-ms="641" started-at="2015-11-06T11:50:40Z" finished-at="2015-11-06T11:50:41Z">
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="testUntitled" duration-ms="607" started-at="2015-11-06T11:59:24Z" finished-at="2015-11-06T11:59:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="tearDown" is-config="true" duration-ms="390" started-at="2015-11-06T11:50:41Z" finished-at="2015-11-06T11:50:41Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="tearDown" is-config="true" duration-ms="316" started-at="2015-11-06T11:59:25Z" finished-at="2015-11-06T11:59:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -78,7 +78,9 @@ public class CheckSearchAreFound extends TestBase {
 		elements = driver.findElements(By.xpath(
 				"/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/a[1]/*/div[@class='title']"));
 		for (WebElement el : elements) {
-			System.out.println("The results have not right name");
+			if (!existName.equals(el.getText())) {
+				System.out.println("The results have not right name");
+			}
 			assert(existName.equals(el.getText()));
 		}
 	}
