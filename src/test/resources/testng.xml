@@ -10,14 +10,14 @@
 
 	<test name="Test001_CheckSearchNotFound">
 		<classes>
-			<class name="denis.trening.AddFilmValid">
+			<class name="denis.trening.CheckSearchNotFound">
 			</class>
 		</classes>
 	</test>
 	
 	<test name="Test002_CheckSearchAreFound">
 		<classes>
-			<class name="denis.trening.AddFilmValid">
+			<class name="denis.trening.CheckSearchAreFound">
 			</class>
 		</classes>
 	</test>

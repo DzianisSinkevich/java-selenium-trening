@@ -27,10 +27,15 @@ public class CheckSearchAreFound extends TestBase {
 				break;
 			} catch (NoSuchElementException e) {
 			}
+			Thread.sleep(1000);
 		}
-		
-		existName = driver.findElement(By.xpath("//section/div[@id='results']/a[1]/*/div[@class='title']")).getText();
-		System.out.println("existName - " + existName);
+		driver.findElement(By.id("q")).clear();
+		driver.findElement(By.id("q")).sendKeys("" + Keys.ENTER);
+
+		existName = driver
+				.findElement(By
+						.xpath("/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/a[1]/*/div[@class='title']"))
+				.getText();
 	}
 
 	@Test(priority = 2)
@@ -50,19 +55,10 @@ public class CheckSearchAreFound extends TestBase {
 			}
 		}
 		kolFilms = driver.findElements(By.cssSelector("[class^='movie_box']")).size();
-		if (kolFilms > 0) {
-			System.out.println("ERROR - Films are found. Amount of films = " + kolFilms);
+		if (kolFilms == 0) {
+			System.out.println("ERROR - Film is not found. Amount of films = " + kolFilms);
 		}
-		assert(kolFilms == 0);
-	}
-
-	@Test(priority = 4)
-	public void reactions() throws Exception {
-		if (kolFilms > 0) {
-			System.out.println("Film is in DB");
-		} else {
-			System.out.println("Film not in DB");
-		}
+		assert(kolFilms != 0);
 	}
 
 	private boolean isElementPresent(By by) {

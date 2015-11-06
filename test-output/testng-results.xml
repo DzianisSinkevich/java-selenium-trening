@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="14647" started-at="2015-11-05T13:35:13Z" finished-at="2015-11-05T13:35:28Z">
+  <suite name="Suite1" duration-ms="16204" started-at="2015-11-06T08:04:09Z" finished-at="2015-11-06T08:04:25Z">
     <groups>
+      <group name="test">
+        <method signature="CheckSearchNotFound.checkAmount()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="checkAmount" class="denis.trening.CheckSearchNotFound"/>
+        <method signature="CheckSearchNotFound.search()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="search" class="denis.trening.CheckSearchNotFound"/>
+      </group> <!-- test -->
     </groups>
-    <test name="Test000_Login" duration-ms="9357" started-at="2015-11-05T13:35:13Z" finished-at="2015-11-05T13:35:22Z">
+    <test name="Test000_Login" duration-ms="8345" started-at="2015-11-06T08:04:09Z" finished-at="2015-11-06T08:04:17Z">
       <class name="denis.trening.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="init" is-config="true" duration-ms="6558" started-at="2015-11-05T16:35:13Z" finished-at="2015-11-05T16:35:20Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="init" is-config="true" duration-ms="5446" started-at="2015-11-06T11:04:09Z" finished-at="2015-11-06T11:04:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="testUntitled" duration-ms="2784" started-at="2015-11-05T16:35:20Z" finished-at="2015-11-05T16:35:22Z">
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="testUntitled" duration-ms="2886" started-at="2015-11-06T11:04:14Z" finished-at="2015-11-06T11:04:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
       </class> <!-- denis.trening.LoginTest -->
     </test> <!-- Test000_Login -->
-    <test name="Test001_CheckSearchNotFound" duration-ms="2610" started-at="2015-11-05T13:35:22Z" finished-at="2015-11-05T13:35:25Z">
-      <class name="denis.trening.AddFilmValid">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="init" is-config="true" duration-ms="47" started-at="2015-11-05T16:35:22Z" finished-at="2015-11-05T16:35:23Z">
+    <test name="Test001_CheckSearchNotFound" duration-ms="6210" started-at="2015-11-06T08:04:17Z" finished-at="2015-11-06T08:04:23Z">
+      <class name="denis.trening.CheckSearchNotFound">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="init" is-config="true" duration-ms="45" started-at="2015-11-06T11:04:17Z" finished-at="2015-11-06T11:04:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="openPageOfAddFilm()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="openPageOfAddFilm" duration-ms="1379" started-at="2015-11-05T16:35:23Z" finished-at="2015-11-05T16:35:24Z">
+        <test-method status="PASS" signature="search()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="search" duration-ms="900" started-at="2015-11-06T11:04:17Z" finished-at="2015-11-06T11:04:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openPageOfAddFilm -->
-        <test-method status="PASS" signature="insertValidData()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="insertValidData" duration-ms="729" started-at="2015-11-05T16:35:24Z" finished-at="2015-11-05T16:35:25Z">
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="checkAmount" duration-ms="5262" started-at="2015-11-06T11:04:18Z" finished-at="2015-11-06T11:04:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- insertValidData -->
-        <test-method status="PASS" signature="checkOfAdding()[pri:0, instance:denis.trening.AddFilmValid@17c68925]" name="checkOfAdding" duration-ms="448" started-at="2015-11-05T16:35:25Z" finished-at="2015-11-05T16:35:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkOfAdding -->
-      </class> <!-- denis.trening.AddFilmValid -->
+        </test-method> <!-- checkAmount -->
+      </class> <!-- denis.trening.CheckSearchNotFound -->
     </test> <!-- Test001_CheckSearchNotFound -->
-    <test name="Test002_CheckSearchAreFound" duration-ms="2159" started-at="2015-11-05T13:35:25Z" finished-at="2015-11-05T13:35:27Z">
-      <class name="denis.trening.AddFilmValid">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmValid@17f6480]" name="init" is-config="true" duration-ms="27" started-at="2015-11-05T16:35:25Z" finished-at="2015-11-05T16:35:25Z">
+    <test name="Test002_CheckSearchAreFound" duration-ms="934" started-at="2015-11-06T08:04:23Z" finished-at="2015-11-06T08:04:24Z">
+      <class name="denis.trening.CheckSearchAreFound">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="init" is-config="true" duration-ms="14" started-at="2015-11-06T11:04:23Z" finished-at="2015-11-06T11:04:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="openPageOfAddFilm()[pri:0, instance:denis.trening.AddFilmValid@17f6480]" name="openPageOfAddFilm" duration-ms="945" started-at="2015-11-05T16:35:25Z" finished-at="2015-11-05T16:35:26Z">
+        <test-method status="PASS" signature="checkOfExistingName()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="checkOfExistingName" duration-ms="856" started-at="2015-11-06T11:04:23Z" finished-at="2015-11-06T11:04:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openPageOfAddFilm -->
-        <test-method status="PASS" signature="insertValidData()[pri:0, instance:denis.trening.AddFilmValid@17f6480]" name="insertValidData" duration-ms="770" started-at="2015-11-05T16:35:26Z" finished-at="2015-11-05T16:35:27Z">
+        </test-method> <!-- checkOfExistingName -->
+        <test-method status="PASS" signature="search()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="search" duration-ms="36" started-at="2015-11-06T11:04:24Z" finished-at="2015-11-06T11:04:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- insertValidData -->
-        <test-method status="PASS" signature="checkOfAdding()[pri:0, instance:denis.trening.AddFilmValid@17f6480]" name="checkOfAdding" duration-ms="415" started-at="2015-11-05T16:35:27Z" finished-at="2015-11-05T16:35:27Z">
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="checkAmount" duration-ms="25" started-at="2015-11-06T11:04:24Z" finished-at="2015-11-06T11:04:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkOfAdding -->
-      </class> <!-- denis.trening.AddFilmValid -->
+        </test-method> <!-- checkAmount -->
+      </class> <!-- denis.trening.CheckSearchAreFound -->
     </test> <!-- Test002_CheckSearchAreFound -->
-    <test name="Test999_Logout" duration-ms="493" started-at="2015-11-05T13:35:27Z" finished-at="2015-11-05T13:35:28Z">
+    <test name="Test999_Logout" duration-ms="688" started-at="2015-11-06T08:04:24Z" finished-at="2015-11-06T08:04:25Z">
       <class name="denis.trening.Logout">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.Logout@4411d970]" name="init" is-config="true" duration-ms="11" started-at="2015-11-05T16:35:27Z" finished-at="2015-11-05T16:35:27Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="init" is-config="true" duration-ms="15" started-at="2015-11-06T11:04:24Z" finished-at="2015-11-06T11:04:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.Logout@4411d970]" name="testUntitled" duration-ms="481" started-at="2015-11-05T16:35:27Z" finished-at="2015-11-05T16:35:28Z">
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="testUntitled" duration-ms="673" started-at="2015-11-06T11:04:24Z" finished-at="2015-11-06T11:04:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.Logout@4411d970]" name="tearDown" is-config="true" duration-ms="349" started-at="2015-11-05T16:35:28Z" finished-at="2015-11-05T16:35:28Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="tearDown" is-config="true" duration-ms="316" started-at="2015-11-06T11:04:25Z" finished-at="2015-11-06T11:04:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

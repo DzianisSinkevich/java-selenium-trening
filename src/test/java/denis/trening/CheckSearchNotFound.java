@@ -15,7 +15,7 @@ public class CheckSearchNotFound extends TestBase {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-	@Test(priority = 2, groups = "test")
+	@Test(priority = 1, groups = "test")
 	public void search() throws Exception {
 		driver.findElement(By.linkText("Home")).click();
 		for (int count = 0;; count++) {
@@ -27,35 +27,28 @@ public class CheckSearchNotFound extends TestBase {
 			} catch (NoSuchElementException e) {
 			}
 		}
-		
+
 		driver.findElement(By.id("q")).sendKeys("ForNotFoundFilm" + Keys.ENTER);
 	}
 
-	@Test(priority = 3, groups = "test")
+	@Test(priority = 2, groups = "test")
 	public void checkAmount() throws Exception {
 		for (int count = 0;; count++) {
 			if (count >= 10)
 				throw new TimeoutException();
 			try {
-				driver.findElement(By.id("results"));
+				driver.findElement(By.xpath(
+						"/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/div[@class='content']"));
 				break;
 			} catch (NoSuchElementException e) {
 			}
+			Thread.sleep(1000);
 		}
 		kolFilms = driver.findElements(By.cssSelector("[class^='movie_box']")).size();
-		if (kolFilms == 0) {
-			System.out.println("ERROR - Film is not found. Amount of films = " + kolFilms);
+		if (kolFilms != 0) {
+			System.out.println("ERROR - Films are found. Amount of films = " + kolFilms);
 		}
 		assert(kolFilms == 0);
-	}
-
-	@Test(priority = 4, groups = "test")
-	public void reactions() throws Exception {
-		if (kolFilms > 0) {
-			System.out.println("Film is in DB");
-		} else {
-			System.out.println("Film not in DB");
-		}
 	}
 
 	private boolean isElementPresent(By by) {
