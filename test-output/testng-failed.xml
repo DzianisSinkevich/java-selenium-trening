@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite1]" data-provider-thread-count="1">
-  <test name="Test002_CheckSearchAreFound(failed)">
+  <test name="Test001_CheckSearchNotFound(failed)">
     <classes>
       <class name="denis.trening.Logout">
         <methods>
@@ -11,6 +11,7 @@
       </class> <!-- denis.trening.Logout -->
       <class name="denis.trening.CheckSearchNotFound">
         <methods>
+          <include name="checkAmount"/>
           <include name="init"/>
         </methods>
       </class> <!-- denis.trening.CheckSearchNotFound -->
@@ -21,10 +22,9 @@
       </class> <!-- denis.trening.LoginTest -->
       <class name="denis.trening.CheckSearchAreFound">
         <methods>
-          <include name="checkAmount"/>
           <include name="init"/>
         </methods>
       </class> <!-- denis.trening.CheckSearchAreFound -->
     </classes>
-  </test> <!-- Test002_CheckSearchAreFound(failed) -->
+  </test> <!-- Test001_CheckSearchNotFound(failed) -->
 </suite> <!-- Failed suite [Suite1] -->
