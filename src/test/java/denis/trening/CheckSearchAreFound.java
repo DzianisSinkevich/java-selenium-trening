@@ -53,6 +53,7 @@ public class CheckSearchAreFound extends TestBase {
 				break;
 			} catch (NoSuchElementException e) {
 			}
+			Thread.sleep(1000);
 		}
 		kolFilms = driver.findElements(By.cssSelector("[class^='movie_box']")).size();
 		if (kolFilms == 0) {

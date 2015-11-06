@@ -26,6 +26,7 @@ public class CheckSearchNotFound extends TestBase {
 				break;
 			} catch (NoSuchElementException e) {
 			}
+			Thread.sleep(1000);
 		}
 
 		driver.findElement(By.id("q")).sendKeys("ForNotFoundFilm" + Keys.ENTER);
