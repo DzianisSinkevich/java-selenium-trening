@@ -1,10 +1,14 @@
 package denis.trening;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import denis_trening_pages.TestBase;
@@ -12,6 +16,7 @@ import denis_trening_pages.TestBase;
 public class CheckSearchAreFound extends TestBase {
 	int kolFilms = 0;
 	String existName = "";
+	static List<WebElement> elements = new ArrayList<WebElement>();
 
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
@@ -60,6 +65,11 @@ public class CheckSearchAreFound extends TestBase {
 			System.out.println("ERROR - Film is not found. Amount of films = " + kolFilms);
 		}
 		assert(kolFilms != 0);
+		elements = driver.findElements(By.xpath(
+				"/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/a[1]/*/div[@class='title']"));
+		for (WebElement el : elements) {
+			assert(existName.equals(el.getText()));
+		}
 	}
 
 	private boolean isElementPresent(By by) {
