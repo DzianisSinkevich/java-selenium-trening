@@ -3,29 +3,9 @@
 	preserve-order="true">
 	<test name="Test000_Login">
 		<classes>
-			<class name="denis.trening.LoginTest">
+			<class name="denis.trening.AddFilmValid">
 			</class>
 		</classes>
 	</test>
 
-	<test name="Test001_CheckSearchNotFound">
-		<classes>
-			<class name="denis.trening.CheckSearchNotFound">
-			</class>
-		</classes>
-	</test>
-	
-	<test name="Test002_CheckSearchAreFound">
-		<classes>
-			<class name="denis.trening.CheckSearchAreFound">
-			</class>
-		</classes>
-	</test>
-
-	<test name="Test999_Logout">
-		<classes>
-			<class name="denis.trening.Logout">
-			</class>
-		</classes>
-	</test>
 </suite> 	

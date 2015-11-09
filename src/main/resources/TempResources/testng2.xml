@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1" data-provider-thread-count="1"
+	preserve-order="true">
+	<test name="Test000_Login">
+		<classes>
+			<class name="denis.trening.LoginTest">
+			</class>
+		</classes>
+	</test>
+
+	<test name="Test001_AddFilmValidData">
+		<classes>
+			<class name="denis.trening.AddFilmValid">
+			</class>
+		</classes>
+	</test>
+
+	<test name="Test002_AddFilmInvalidData">
+		<classes>
+			<class name="denis.trening.AddFilmInvalid">
+			</class>
+		</classes>
+	</test>
+
+	<test name="Test003_DeleteFilm">
+		<classes>
+			<class name="denis.trening.DeleteFilm">
+			</class>
+		</classes>
+	</test>
+
+	<test name="Test999_Logout">
+		<classes>
+			<class name="denis.trening.Logout">
+			</class>
+		</classes>
+	</test>
+</suite> 	

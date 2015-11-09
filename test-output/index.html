@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite1">
-              <span class="suite-name border-passed">Suite1</span>
+              <span class="suite-name border-failed">Suite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -53,12 +53,12 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite1">
-                    <span class="test-stats">4 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Suite1">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,51 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite1" class="hide-methods passed suite-Suite1"> (hide)</a> <!-- hide-methods passed suite-Suite1 -->
-                      <a href="#" panel-name="suite-Suite1" class="show-methods passed suite-Suite1"> (show)</a> <!-- show-methods passed suite-Suite1 -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite1" class="hide-methods failed suite-Suite1"> (hide)</a> <!-- hide-methods failed suite-Suite1 -->
+                      <a href="#" panel-name="suite-Suite1" class="show-methods failed suite-Suite1"> (show)</a> <!-- show-methods failed suite-Suite1 -->
                     </span>
-                    <div class="method-list-content passed suite-Suite1">
+                    <div class="method-list-content failed suite-Suite1">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.CheckSearchNotFound" hash-for-method="checkAmount">checkAmount</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.AddFilmValid" hash-for-method="testUntitled">testUntitled</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.CheckSearchAreFound" hash-for-method="checkAmount">checkAmount</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.CheckSearchAreFound" hash-for-method="checkOfExistingName">checkOfExistingName</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.CheckSearchNotFound" hash-for-method="search">search</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.CheckSearchAreFound" hash-for-method="search">search</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.LoginTest" hash-for-method="testUntitled">testUntitled</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="denis.trening.Logout" hash-for-method="testUntitled">testUntitled</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite1 -->
+                    </div> <!-- method-list-content failed suite-Suite1 -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -146,10 +116,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite1" class="panel Suite1">
-          <div class="suite-Suite1-class-passed">
+          <div class="suite-Suite1-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">denis.trening.Logout</span>
+              <img src="failed.png"/>
+              <span class="class-name">denis.trening.AddFilmValid</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -157,76 +127,16 @@
                   <a name="testUntitled">
                   </a> <!-- testUntitled -->
                   <span class="method-name">testUntitled</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at denis.trening.pages.InternalPage.readAllFilmsName(InternalPage.java:85)
+	at denis.trening.applogic2.FilmHelper2.isFilmAdded(FilmHelper2.java:35)
+	at denis.trening.AddFilmValid.testUntitled(AddFilmValid.java:24)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-passed -->
-          <div class="suite-Suite1-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">denis.trening.CheckSearchNotFound</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkAmount">
-                  </a> <!-- checkAmount -->
-                  <span class="method-name">checkAmount</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="search">
-                  </a> <!-- search -->
-                  <span class="method-name">search</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-passed -->
-          <div class="suite-Suite1-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">denis.trening.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled">
-                  </a> <!-- testUntitled -->
-                  <span class="method-name">testUntitled</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-passed -->
-          <div class="suite-Suite1-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">denis.trening.CheckSearchAreFound</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkAmount">
-                  </a> <!-- checkAmount -->
-                  <span class="method-name">checkAmount</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkOfExistingName">
-                  </a> <!-- checkOfExistingName -->
-                  <span class="method-name">checkOfExistingName</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="search">
-                  </a> <!-- search -->
-                  <span class="method-name">search</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-passed -->
+          </div> <!-- suite-Suite1-class-failed -->
         </div> <!-- panel Suite1 -->
         <div panel-name="test-xml-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -239,24 +149,9 @@
 &lt;suite name=&quot;Suite1&quot; data-provider-thread-count=&quot;1&quot;&gt;
   &lt;test name=&quot;Test000_Login&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;denis.trening.LoginTest&quot;/&gt;
+      &lt;class name=&quot;denis.trening.AddFilmValid&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test000_Login --&gt;
-  &lt;test name=&quot;Test001_CheckSearchNotFound&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;denis.trening.CheckSearchNotFound&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test001_CheckSearchNotFound --&gt;
-  &lt;test name=&quot;Test002_CheckSearchAreFound&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;denis.trening.CheckSearchAreFound&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test002_CheckSearchAreFound --&gt;
-  &lt;test name=&quot;Test999_Logout&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;denis.trening.Logout&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test999_Logout --&gt;
 &lt;/suite&gt; &lt;!-- Suite1 --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -270,15 +165,6 @@
               <li>
                 <span class="test-name">Test000_Login (1 class)</span>
               </li>
-              <li>
-                <span class="test-name">Test001_CheckSearchNotFound (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Test002_CheckSearchAreFound (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Test999_Logout (1 class)</span>
-              </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -287,18 +173,6 @@
             <span class="header-content">Groups for Suite1</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">test</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">checkAmount</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">search</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite1" class="panel">
@@ -315,40 +189,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkAmount')
-data.setCell(0, 2, 'denis.trening.CheckSearchNotFound')
-data.setCell(0, 3, 5222);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testUntitled')
-data.setCell(1, 2, 'denis.trening.LoginTest')
-data.setCell(1, 3, 3344);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'checkOfExistingName')
-data.setCell(2, 2, 'denis.trening.CheckSearchAreFound')
-data.setCell(2, 3, 952);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'search')
-data.setCell(3, 2, 'denis.trening.CheckSearchNotFound')
-data.setCell(3, 3, 774);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testUntitled')
-data.setCell(4, 2, 'denis.trening.Logout')
-data.setCell(4, 3, 607);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'checkAmount')
-data.setCell(5, 2, 'denis.trening.CheckSearchAreFound')
-data.setCell(5, 3, 54);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'search')
-data.setCell(6, 2, 'denis.trening.CheckSearchAreFound')
-data.setCell(6, 3, 33);
+data.setCell(0, 1, 'testUntitled')
+data.setCell(0, 2, 'denis.trening.AddFilmValid')
+data.setCell(0, 3, 4007);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -374,63 +224,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">denis.trening.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">denis.trening.AddFilmValid</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testUntitled</span>
-                <span class="method-start">4587 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">denis.trening.CheckSearchNotFound</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">7957 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">search</span>
-                <span class="method-start">7988 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">checkAmount</span>
-                <span class="method-start">8762 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">denis.trening.CheckSearchAreFound</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">13988 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">checkOfExistingName</span>
-                <span class="method-start">14002 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">search</span>
-                <span class="method-start">14955 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">checkAmount</span>
-                <span class="method-start">14989 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">denis.trening.Logout</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">15046 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">testUntitled</span>
-                <span class="method-start">15076 ms</span>
+                <span class="method-start">6640 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">15686 ms</span>
+                <span class="method-name">stop</span>
+                <span class="method-start">10677 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

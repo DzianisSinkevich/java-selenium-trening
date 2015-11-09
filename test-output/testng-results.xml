@@ -1,77 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="15692" started-at="2015-11-06T08:59:09Z" finished-at="2015-11-06T08:59:25Z">
+  <suite name="Suite1" duration-ms="10661" started-at="2015-11-09T14:37:09Z" finished-at="2015-11-09T14:37:20Z">
     <groups>
-      <group name="test">
-        <method signature="CheckSearchNotFound.checkAmount()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="checkAmount" class="denis.trening.CheckSearchNotFound"/>
-        <method signature="CheckSearchNotFound.search()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="search" class="denis.trening.CheckSearchNotFound"/>
-      </group> <!-- test -->
     </groups>
-    <test name="Test000_Login" duration-ms="7941" started-at="2015-11-06T08:59:09Z" finished-at="2015-11-06T08:59:17Z">
-      <class name="denis.trening.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="init" is-config="true" duration-ms="4584" started-at="2015-11-06T11:59:09Z" finished-at="2015-11-06T11:59:14Z">
+    <test name="Test000_Login" duration-ms="10661" started-at="2015-11-09T14:37:09Z" finished-at="2015-11-09T14:37:20Z">
+      <class name="denis.trening.AddFilmValid">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmValid@5e025e70]" name="init" is-config="true" duration-ms="6635" started-at="2015-11-09T17:37:09Z" finished-at="2015-11-09T17:37:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.LoginTest@2c8d66b2]" name="testUntitled" duration-ms="3344" started-at="2015-11-06T11:59:14Z" finished-at="2015-11-06T11:59:17Z">
+        <test-method status="FAIL" signature="testUntitled()[pri:0, instance:denis.trening.AddFilmValid@5e025e70]" name="testUntitled" duration-ms="4007" started-at="2015-11-09T17:37:16Z" finished-at="2015-11-09T17:37:20Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at denis.trening.pages.InternalPage.readAllFilmsName(InternalPage.java:85)
+	at denis.trening.applogic2.FilmHelper2.isFilmAdded(FilmHelper2.java:35)
+	at denis.trening.AddFilmValid.testUntitled(AddFilmValid.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
-      </class> <!-- denis.trening.LoginTest -->
+        <test-method status="PASS" signature="stop()[pri:0, instance:denis.trening.AddFilmValid@5e025e70]" name="stop" is-config="true" duration-ms="393" started-at="2015-11-09T17:37:20Z" finished-at="2015-11-09T17:37:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stop -->
+      </class> <!-- denis.trening.AddFilmValid -->
     </test> <!-- Test000_Login -->
-    <test name="Test001_CheckSearchNotFound" duration-ms="6028" started-at="2015-11-06T08:59:17Z" finished-at="2015-11-06T08:59:23Z">
-      <class name="denis.trening.CheckSearchNotFound">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="init" is-config="true" duration-ms="31" started-at="2015-11-06T11:59:17Z" finished-at="2015-11-06T11:59:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="search()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="search" duration-ms="774" started-at="2015-11-06T11:59:17Z" finished-at="2015-11-06T11:59:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- search -->
-        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckSearchNotFound@17c68925]" name="checkAmount" duration-ms="5222" started-at="2015-11-06T11:59:18Z" finished-at="2015-11-06T11:59:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkAmount -->
-      </class> <!-- denis.trening.CheckSearchNotFound -->
-    </test> <!-- Test001_CheckSearchNotFound -->
-    <test name="Test002_CheckSearchAreFound" duration-ms="1055" started-at="2015-11-06T08:59:23Z" finished-at="2015-11-06T08:59:24Z">
-      <class name="denis.trening.CheckSearchAreFound">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="init" is-config="true" duration-ms="14" started-at="2015-11-06T11:59:23Z" finished-at="2015-11-06T11:59:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="checkOfExistingName()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="checkOfExistingName" duration-ms="952" started-at="2015-11-06T11:59:23Z" finished-at="2015-11-06T11:59:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkOfExistingName -->
-        <test-method status="PASS" signature="search()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="search" duration-ms="33" started-at="2015-11-06T11:59:24Z" finished-at="2015-11-06T11:59:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- search -->
-        <test-method status="PASS" signature="checkAmount()[pri:0, instance:denis.trening.CheckSearchAreFound@2d6e8792]" name="checkAmount" duration-ms="54" started-at="2015-11-06T11:59:24Z" finished-at="2015-11-06T11:59:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkAmount -->
-      </class> <!-- denis.trening.CheckSearchAreFound -->
-    </test> <!-- Test002_CheckSearchAreFound -->
-    <test name="Test999_Logout" duration-ms="638" started-at="2015-11-06T08:59:24Z" finished-at="2015-11-06T08:59:25Z">
-      <class name="denis.trening.Logout">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="init" is-config="true" duration-ms="30" started-at="2015-11-06T11:59:24Z" finished-at="2015-11-06T11:59:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="testUntitled" duration-ms="607" started-at="2015-11-06T11:59:24Z" finished-at="2015-11-06T11:59:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:denis.trening.Logout@6442b0a6]" name="tearDown" is-config="true" duration-ms="316" started-at="2015-11-06T11:59:25Z" finished-at="2015-11-06T11:59:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- denis.trening.Logout -->
-    </test> <!-- Test999_Logout -->
   </suite> <!-- Suite1 -->
 </testng-results>

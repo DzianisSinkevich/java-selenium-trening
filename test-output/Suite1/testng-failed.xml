@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite1]" data-provider-thread-count="1">
-  <test name="Test002_CheckSearchAreFound(failed)">
+  <test name="Test000_Login(failed)">
     <classes>
-      <class name="denis.trening.Logout">
-        <methods>
-          <include name="tearDown"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- denis.trening.Logout -->
-      <class name="denis.trening.CheckSearchNotFound">
+      <class name="denis.trening.AddFilmValid">
         <methods>
           <include name="init"/>
+          <include name="testUntitled"/>
+          <include name="stop"/>
         </methods>
-      </class> <!-- denis.trening.CheckSearchNotFound -->
-      <class name="denis.trening.LoginTest">
-        <methods>
-          <include name="init"/>
-        </methods>
-      </class> <!-- denis.trening.LoginTest -->
-      <class name="denis.trening.CheckSearchAreFound">
-        <methods>
-          <include name="checkAmount"/>
-          <include name="checkOfExistingName"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- denis.trening.CheckSearchAreFound -->
+      </class> <!-- denis.trening.AddFilmValid -->
     </classes>
-  </test> <!-- Test002_CheckSearchAreFound(failed) -->
+  </test> <!-- Test000_Login(failed) -->
 </suite> <!-- Failed suite [Suite1] -->
