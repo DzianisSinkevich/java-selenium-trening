@@ -16,6 +16,7 @@ public class UserHelper2 extends DriverBasedHelper implements UserHelper {
       .setUsernameField(user.getLogin())
       .setPasswordField(user.getPassword())
       .clickSubmitButton();
+//    pages.internalPage.checkAmountAfter();
   }
 
   @Override

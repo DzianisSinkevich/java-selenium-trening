@@ -10,5 +10,6 @@ public interface FilmHelper {
 	void delete(Film film);
 	List<Film> search(String title);
 	boolean isFilmAdded(Film film);
+	boolean isFilmDeleted(Film film);
 
 }

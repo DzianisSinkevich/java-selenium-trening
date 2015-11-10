@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1" data-provider-thread-count="1"
+	preserve-order="true">
+	<test name="Test001_AddFilmValid">
+		<classes>
+			<class name="denis.trening.AddFilmValid">
+			</class>
+		</classes>
+	</test>
+	<test name="Test002_AddFilmInvalid">
+		<classes>
+			<class name="denis.trening.AddFilmInvalid">
+			</class>
+		</classes>
+	</test>
+</suite> 	

@@ -3,7 +3,6 @@ package denis.trening.applogic2;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -16,47 +15,54 @@ public class FilmHelper2 extends DriverBasedHelper implements FilmHelper {
 		super(manager.getWebDriver());
 	}
 
+	@FindBy(css = "nav a[href = './?go=add']")
+	private WebElement firstFilm;
+
 	@Override
 	public void create(Film film) {
-		pages.internalPage.clickFilmAddLink().ensurePageLoaded()
-				.setTitleField(film.getTitle()).setYearField(film.getYear())
-				.clickAddButton();
+		pages.internalPage.checkAmountAfter();
+		pages.internalPage.clickFilmAddLink().ensurePageLoaded().setTitleField(film.getTitle())
+				.setYearField(film.getYear()).clickAddButton();
 	}
 
 	@Override
 	public void delete(Film film) {
-		// TODO Auto-generated method stub
-
+		pages.internalPage.checkAmountAfter();
+		pages.internalPage.clickToFirstFilm();
+		pages.filmManagementPage.ensurePageLoaded().clickRemoveFilm();
 	}
 
 	@Override
 	public List<Film> search(String title) {
-		WebElement elements;
+		List<WebElement> elements;
 		List<Film> films = new ArrayList<Film>();
 		pages.internalPage.clickSearchLink(title);
-		 elements = pages.internalPage.getSearchedFilms();
-		 System.out.println(elements.toString());
-		// driver.findElements(By.xpath("/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/*/div[@class='title']"));
-//		 for (WebElement el : elements) {
-		 films.add(new Film().setTitle(elements.getText()));
-//		 }
-		return null;
+		elements = pages.internalPage.getSearchedFilms();
+		for (WebElement el : elements) {
+			films.add(new Film().setTitle(el.getText()));
+		}
+		return films;
 	}
-	
-	@FindBy(css = "nav a[href = './?go=add']")
-	private WebElement firstFilm;
-	
+
 	@Override
 	public boolean isFilmAdded(Film film) {
-		//firstFilm.click();
 		List<Film> films = search(film.getTitle());
-		// for (Film fil : films) {
-		// String elval = fil.getTitle();
-		// System.out.println("firstFilm - " + firstFilm);
-		// if (elval.equals(film.getTitle())) {
-		// return true;
-		// }
-		// }
+		if (pages.internalPage.confirmAmountsAdd()) {
+			for (Film someFilm : films) {
+				if (someFilm.getTitle().equals(film.getTitle())) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public boolean isFilmDeleted(Film film) {
+		List<Film> films = search(film.getTitle());
+		if (pages.internalPage.confirmAmountsDelete()) {
+			return true;
+		}
 		return false;
 	}
 

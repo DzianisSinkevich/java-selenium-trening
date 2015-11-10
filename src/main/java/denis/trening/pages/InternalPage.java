@@ -3,6 +3,8 @@ package denis.trening.pages;
 import static org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -21,6 +23,8 @@ public class InternalPage extends AnyPage {
 		return this;
 	}
 
+	public int afterAmountFilms;
+
 	@FindBy(css = HOME_LINK)
 	private WebElement homeLink;
 
@@ -35,12 +39,18 @@ public class InternalPage extends AnyPage {
 
 	@FindBy(css = "nav a[href $= '?logout']")
 	private WebElement logoutLink;
-	
+
 	@FindBy(xpath = "//div[@class='title']")
-	private WebElement searchedFilms;
+	private List<WebElement> searchedFilms;
 
 	@FindBy(id = "q")
 	private WebElement searchField;
+
+	@FindBy(xpath = "/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/*/*/div[@class='movie_cover']/div[@class='nocover']")
+	private List<WebElement> forAmountFilms;
+
+	@FindBy(xpath = "/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/a[1]")
+	private WebElement firstFilm;
 
 	public InternalPage clickHomePage() {
 		homeLink.click();
@@ -72,10 +82,62 @@ public class InternalPage extends AnyPage {
 		pages.internalPage.clickHomePage();
 		searchField.click();
 		searchField.sendKeys(title + Keys.ENTER);
+		driver.navigate().refresh();
 		return pages.internalPage;
 	}
-	
-	public  WebElement getSearchedFilms(){
+
+	public InternalPage clearingSearchField() {
+		String selectAll = Keys.chord(Keys.CONTROL + "a");
+		searchField.sendKeys(selectAll + Keys.DELETE + Keys.ENTER);
+		clickHomePage();
+		return pages.internalPage;
+	}
+
+	public List<WebElement> getSearchedFilms() {
 		return searchedFilms;
+	}
+
+	public void checkAmountAfter() {
+		afterAmountFilms = forAmountFilms.size();
+		System.out.println("NewafterAmountFilms " + afterAmountFilms);
+	}
+
+	public boolean confirmAmountsAdd() {
+		clearingSearchField();
+		System.out.println("afterAmountFilms " + afterAmountFilms);
+		System.out.println("forAmountFilms " + forAmountFilms.size());
+		if (afterAmountFilms + 1 == forAmountFilms.size()) {
+			return true;
+		}
+		return false;
+	}
+
+	public FilmManagementPage clickToFilm(String title) {
+		List<WebElement> elements;
+		elements = getSearchedFilms();
+		for (WebElement el : elements) {
+			if (el.getText().equals(title)) {
+				el.click();
+				break;
+			}
+		}
+		return pages.filmManagementPage;
+	}
+
+	public FilmManagementPage clickToFirstFilm() {
+		firstFilm.click();
+		return pages.filmManagementPage;
+	}
+
+	public boolean confirmAmountsDelete() {
+		clearingSearchField();
+		driver.navigate().refresh();
+		pages.internalPage.ensurePageLoaded();
+		System.out.println("afterAmountFilms " + afterAmountFilms);
+		System.out.println("forAmountFilms " + forAmountFilms.size());
+		if (afterAmountFilms - 1 == forAmountFilms.size()) {
+			return true;
+		}
+		return false;
 	}
 }

@@ -47,7 +47,7 @@ public class FilmAddPage extends InternalPage {
 
 	public FilmAddPage ensurePageLoaded() {
 		super.ensurePageLoaded();
-		wait.until(presenceOfElementLocated(By.cssSelector("[class='addmovie']")));
+		wait.until(presenceOfElementLocated(By.cssSelector("[name='name']")));
 		return this;
 	}
 
