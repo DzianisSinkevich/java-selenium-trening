@@ -22,6 +22,21 @@
 			<artifactId>webdriver-factory</artifactId>
 			<version>1.1.46</version>
 		</dependency>
+		<dependency>
+			<groupId>ru.yandex.qatools.htmlelements</groupId>
+			<artifactId>htmlelements-java</artifactId>
+			<version>1.14</version>
+		</dependency>
+		<dependency>
+			<groupId>ru.yandex.qatools.htmlelements</groupId>
+			<artifactId>htmlelements-thucydides</artifactId>
+			<version>1.14</version>
+		</dependency>
+		<dependency>
+			<groupId>ru.yandex.qatools.htmlelements</groupId>
+			<artifactId>htmlelements-all</artifactId>
+			<version>1.14</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<resources>

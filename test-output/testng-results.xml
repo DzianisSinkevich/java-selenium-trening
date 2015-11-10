@@ -2,22 +2,20 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="10661" started-at="2015-11-09T14:37:09Z" finished-at="2015-11-09T14:37:20Z">
+  <suite name="Suite1" duration-ms="16526" started-at="2015-11-09T19:20:08Z" finished-at="2015-11-09T19:20:25Z">
     <groups>
     </groups>
-    <test name="Test000_Login" duration-ms="10661" started-at="2015-11-09T14:37:09Z" finished-at="2015-11-09T14:37:20Z">
+    <test name="Test000_Login" duration-ms="16526" started-at="2015-11-09T19:20:08Z" finished-at="2015-11-09T19:20:25Z">
       <class name="denis.trening.AddFilmValid">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmValid@5e025e70]" name="init" is-config="true" duration-ms="6635" started-at="2015-11-09T17:37:09Z" finished-at="2015-11-09T17:37:16Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmValid@bc464]" name="init" is-config="true" duration-ms="10015" started-at="2015-11-09T22:20:08Z" finished-at="2015-11-09T22:20:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled()[pri:0, instance:denis.trening.AddFilmValid@5e025e70]" name="testUntitled" duration-ms="4007" started-at="2015-11-09T17:37:16Z" finished-at="2015-11-09T17:37:20Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="testUntitled()[pri:0, instance:denis.trening.AddFilmValid@bc464]" name="testUntitled" duration-ms="6486" started-at="2015-11-09T22:20:18Z" finished-at="2015-11-09T22:20:25Z">
+          <exception class="java.lang.AssertionError">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at denis.trening.pages.InternalPage.readAllFilmsName(InternalPage.java:85)
-	at denis.trening.applogic2.FilmHelper2.isFilmAdded(FilmHelper2.java:35)
-	at denis.trening.AddFilmValid.testUntitled(AddFilmValid.java:24)
+              <![CDATA[java.lang.AssertionError
+	at denis.trening.AddFilmValid.testUntitled(AddFilmValid.java:19)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -44,11 +42,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="stop()[pri:0, instance:denis.trening.AddFilmValid@5e025e70]" name="stop" is-config="true" duration-ms="393" started-at="2015-11-09T17:37:20Z" finished-at="2015-11-09T17:37:20Z">
+        <test-method status="PASS" signature="stop()[pri:0, instance:denis.trening.AddFilmValid@bc464]" name="stop" is-config="true" duration-ms="1909" started-at="2015-11-09T22:20:25Z" finished-at="2015-11-09T22:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stop -->

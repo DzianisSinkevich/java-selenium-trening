@@ -1,17 +1,15 @@
 package denis.trening.pages;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.*;
-
-import java.util.ArrayList;
-import java.util.List;
+import static org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent;
+import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
 public class InternalPage extends AnyPage {
+	public static final String HOME_LINK = "nav a[href = 'http://localhost/php4dvd/']";
 
 	public InternalPage(PageManager pages) {
 		super(pages);
@@ -23,7 +21,7 @@ public class InternalPage extends AnyPage {
 		return this;
 	}
 
-	@FindBy(css = "nav a[href = 'http://localhost/php4dvd/']")
+	@FindBy(css = HOME_LINK)
 	private WebElement homeLink;
 
 	@FindBy(css = "nav a[href $= '?go=profile']")
@@ -37,11 +35,12 @@ public class InternalPage extends AnyPage {
 
 	@FindBy(css = "nav a[href $= '?logout']")
 	private WebElement logoutLink;
+	
+	@FindBy(xpath = "//div[@class='title']")
+	private WebElement searchedFilms;
 
 	@FindBy(id = "q")
 	private WebElement searchField;
-
-//	@FindAll(@FindBy(css = "[class*='movie_box']"))
 
 	public InternalPage clickHomePage() {
 		homeLink.click();
@@ -75,18 +74,8 @@ public class InternalPage extends AnyPage {
 		searchField.sendKeys(title + Keys.ENTER);
 		return pages.internalPage;
 	}
-
-	public boolean readAllFilmsName(String title) {
-
-		List<WebElement> elements;
-		elements = driver.findElements(By.xpath("/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/*/*/div[@class='title']"));
-		System.out.println("Amoun - " + elements.size());
-		for (WebElement el : elements) {
-			if (el.getAttribute("value").equals(title)) {
-				System.out.println(el.getText());
-				return true;
-			}
-		}
-		return false;
+	
+	public  WebElement getSearchedFilms(){
+		return searchedFilms;
 	}
 }

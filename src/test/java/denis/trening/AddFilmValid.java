@@ -1,13 +1,8 @@
 package denis.trening;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.testng.annotations.Test;
 
 import denis.trening.model.Film;
-import denis.trening.model.User;
 import denis.trening.pages.TestBase;
 
 public class AddFilmValid extends TestBase {

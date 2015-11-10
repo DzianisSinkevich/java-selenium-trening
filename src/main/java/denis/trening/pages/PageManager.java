@@ -2,7 +2,6 @@ package denis.trening.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 public class PageManager {
 
@@ -13,6 +12,7 @@ public class PageManager {
 	public UserProfilePage userProfilePage;
 	public UserManagementPage userManagementPage;
 	public FilmAddPage filmAddPage;
+	public HomePage homePage;
 
 	public PageManager(WebDriver driver) {
 		this.driver = driver;
@@ -21,6 +21,7 @@ public class PageManager {
 		userProfilePage = initElements(new UserProfilePage(this));
 		userManagementPage = initElements(new UserManagementPage(this));
 		filmAddPage = initElements(new FilmAddPage(this));
+		homePage = initElements(new HomePage(this));
 	}
 
 	private <T extends Page> T initElements(T page) {
