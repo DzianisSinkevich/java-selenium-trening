@@ -8,15 +8,13 @@ import org.openqa.selenium.support.FindBy;
 
 import denis.trening.applogic.FilmHelper;
 import denis.trening.model.Film;
+import denis.trening.pages.InternalPage;
 
 public class FilmHelper2 extends DriverBasedHelper implements FilmHelper {
 
 	public FilmHelper2(ApplicationManager2 manager) {
 		super(manager.getWebDriver());
 	}
-
-	@FindBy(css = "nav a[href = './?go=add']")
-	private WebElement firstFilm;
 
 	@Override
 	public void create(Film film) {
@@ -66,4 +64,30 @@ public class FilmHelper2 extends DriverBasedHelper implements FilmHelper {
 		return false;
 	}
 
+	@Override
+	public boolean isOnlySerchedInResults(Film film) {
+		List<Film> films = new ArrayList<Film>();
+		films = search(film.getTitle());
+		for (Film oneFilm : films) {
+			if (!oneFilm.getTitle().equals(film.getTitle()) || films.size() == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	@Override
+	public boolean notFoundResults(Film film) {
+		List<Film> films = new ArrayList<Film>();
+		films = search(film.getTitle());
+		if (films.size() == 0) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public void getFirstFilmTitle(Film film) {
+		pages.internalPage.firstFilmTitle(film);
+	}
 }

@@ -12,7 +12,7 @@ public class DeleteFilm extends TestBase {
 	@Test
 	public void testUntitled() {
 		app.getUserHelper().loginAs(ADMIN);
-		Film film = new Film().setTitle("");
+		Film film = new Film();
 		app.getFilmHelper().delete(film);
 		assert(app.getFilmHelper().isFilmDeleted(film));
 		app.getUserHelper().logout();

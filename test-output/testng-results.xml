@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="15881" started-at="2015-11-10T13:47:08Z" finished-at="2015-11-10T13:47:24Z">
+  <suite name="Suite1" duration-ms="54028" started-at="2015-11-11T13:54:48Z" finished-at="2015-11-11T13:55:42Z">
     <groups>
     </groups>
-    <test name="Test000_AddFilmValid" duration-ms="15881" started-at="2015-11-10T13:47:08Z" finished-at="2015-11-10T13:47:24Z">
-      <class name="denis.trening.DeleteFilm">
-        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.DeleteFilm@180bc464]" name="init" is-config="true" duration-ms="6997" started-at="2015-11-10T16:47:08Z" finished-at="2015-11-10T16:47:15Z">
+    <test name="Test001_AddFilmValid" duration-ms="14132" started-at="2015-11-11T13:54:48Z" finished-at="2015-11-11T13:55:02Z">
+      <class name="denis.trening.AddFilmValid">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmValid@180bc464]" name="init" is-config="true" duration-ms="6217" started-at="2015-11-11T16:54:48Z" finished-at="2015-11-11T16:54:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.DeleteFilm@180bc464]" name="testUntitled" duration-ms="8872" started-at="2015-11-10T16:47:15Z" finished-at="2015-11-10T16:47:24Z">
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.AddFilmValid@180bc464]" name="testUntitled" duration-ms="7902" started-at="2015-11-11T16:54:54Z" finished-at="2015-11-11T16:55:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="stop()[pri:0, instance:denis.trening.DeleteFilm@180bc464]" name="stop" is-config="true" duration-ms="578" started-at="2015-11-10T16:47:24Z" finished-at="2015-11-10T16:47:24Z">
+      </class> <!-- denis.trening.AddFilmValid -->
+    </test> <!-- Test001_AddFilmValid -->
+    <test name="Test002_AddFilmInvalid" duration-ms="14091" started-at="2015-11-11T13:55:02Z" finished-at="2015-11-11T13:55:16Z">
+      <class name="denis.trening.AddFilmInvalid">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.AddFilmInvalid@735b478]" name="init" is-config="true" duration-ms="53" started-at="2015-11-11T16:55:02Z" finished-at="2015-11-11T16:55:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.AddFilmInvalid@735b478]" name="testUntitled" duration-ms="14032" started-at="2015-11-11T16:55:02Z" finished-at="2015-11-11T16:55:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+      </class> <!-- denis.trening.AddFilmInvalid -->
+    </test> <!-- Test002_AddFilmInvalid -->
+    <test name="Test003_DeleteFilm" duration-ms="7328" started-at="2015-11-11T13:55:16Z" finished-at="2015-11-11T13:55:23Z">
+      <class name="denis.trening.DeleteFilm">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.DeleteFilm@2cb4c3ab]" name="init" is-config="true" duration-ms="27" started-at="2015-11-11T16:55:16Z" finished-at="2015-11-11T16:55:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.DeleteFilm@2cb4c3ab]" name="testUntitled" duration-ms="7301" started-at="2015-11-11T16:55:16Z" finished-at="2015-11-11T16:55:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+      </class> <!-- denis.trening.DeleteFilm -->
+    </test> <!-- Test003_DeleteFilm -->
+    <test name="Test004_SearchPositive" duration-ms="4930" started-at="2015-11-11T13:55:23Z" finished-at="2015-11-11T13:55:28Z">
+      <class name="denis.trening.SearchPositive">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.SearchPositive@69d9c55]" name="init" is-config="true" duration-ms="42" started-at="2015-11-11T16:55:23Z" finished-at="2015-11-11T16:55:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.SearchPositive@69d9c55]" name="testUntitled" duration-ms="4886" started-at="2015-11-11T16:55:23Z" finished-at="2015-11-11T16:55:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+      </class> <!-- denis.trening.SearchPositive -->
+    </test> <!-- Test004_SearchPositive -->
+    <test name="Test005_SearchNegative" duration-ms="13509" started-at="2015-11-11T13:55:28Z" finished-at="2015-11-11T13:55:42Z">
+      <class name="denis.trening.SearchNegative">
+        <test-method status="PASS" signature="init()[pri:0, instance:denis.trening.SearchNegative@7946e1f4]" name="init" is-config="true" duration-ms="25" started-at="2015-11-11T16:55:28Z" finished-at="2015-11-11T16:55:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:denis.trening.SearchNegative@7946e1f4]" name="testUntitled" duration-ms="13483" started-at="2015-11-11T16:55:28Z" finished-at="2015-11-11T16:55:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+        <test-method status="PASS" signature="stop()[pri:0, instance:denis.trening.SearchNegative@7946e1f4]" name="stop" is-config="true" duration-ms="589" started-at="2015-11-11T16:55:42Z" finished-at="2015-11-11T16:55:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stop -->
-      </class> <!-- denis.trening.DeleteFilm -->
-    </test> <!-- Test000_AddFilmValid -->
+      </class> <!-- denis.trening.SearchNegative -->
+    </test> <!-- Test005_SearchNegative -->
   </suite> <!-- Suite1 -->
 </testng-results>

@@ -15,29 +15,31 @@ public class LoginPage extends AnyPage {
 	@FindBy(name = "username")
 	private WebElement usernameField;
 
-  @FindBy(name = "password")
-  private WebElement passwordField;
+	@FindBy(name = "password")
+	private WebElement passwordField;
 
-  @FindBy(name = "submit")
-  private WebElement submitButton;
-  
-  public LoginPage setUsernameField(String text) {
-    usernameField.sendKeys(text);
-    return this;
-  }
+	@FindBy(name = "submit")
+	private WebElement submitButton;
 
-  public LoginPage setPasswordField(String text) {
-    passwordField.sendKeys(text);
-    return this;
-  }
+	public LoginPage setUsernameField(String text) {
+		usernameField.click();
+		usernameField.sendKeys(text);
+		return this;
+	}
 
-  public void clickSubmitButton() {
-    submitButton.click();
-  }
+	public LoginPage setPasswordField(String text) {
+		passwordField.click();
+		passwordField.sendKeys(text);
+		return this;
+	}
 
-  public LoginPage ensurePageLoaded() {
-    super.ensurePageLoaded();
-    wait.until(presenceOfElementLocated(By.id("loginform")));
-    return this;
-  }
+	public void clickSubmitButton() {
+		submitButton.click();
+	}
+
+	public LoginPage ensurePageLoaded() {
+		super.ensurePageLoaded();
+		wait.until(presenceOfElementLocated(By.cssSelector("[name='username']")));
+		return this;
+	}
 }

@@ -10,8 +10,19 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import denis.trening.model.Film;
+
 public class InternalPage extends AnyPage {
 	public static final String HOME_LINK = "nav a[href = 'http://localhost/php4dvd/']";
+	public static final String USER_PROFILE_LINK = "nav a[href $= '?go=profile']";
+	public static final String USER_MANAGEMENT_LINK = "nav a[href $= '?go=users']";
+	public static final String FILM_ADD_LINK = "nav a[href = './?go=add']";
+	public static final String LOGOUT_LINK = "nav a[href $= '?logout']";
+	public static final String SEARCHED_FILMS = "//div[@class='title']";
+	public static final String SEARCHED_FIELD = "q";
+	public static final String FOR_AMOUNT_LINK = "//div[@class='movie_cover']/div[@class='nocover']";
+	public static final String FIRST_FILM = "//div[@id='results']/a[1]/*/div[@class='title']";
+	public static final String LOGIN_FORM = "login";
 
 	public InternalPage(PageManager pages) {
 		super(pages);
@@ -28,29 +39,32 @@ public class InternalPage extends AnyPage {
 	@FindBy(css = HOME_LINK)
 	private WebElement homeLink;
 
-	@FindBy(css = "nav a[href $= '?go=profile']")
+	@FindBy(css = USER_PROFILE_LINK)
 	private WebElement userProfileLink;
 
-	@FindBy(css = "nav a[href $= '?go=users']")
+	@FindBy(css = USER_MANAGEMENT_LINK)
 	private WebElement userManagementLink;
 
-	@FindBy(css = "nav a[href = './?go=add']")
+	@FindBy(css = FILM_ADD_LINK)
 	private WebElement filmAddLink;
 
-	@FindBy(css = "nav a[href $= '?logout']")
+	@FindBy(css = LOGOUT_LINK)
 	private WebElement logoutLink;
 
-	@FindBy(xpath = "//div[@class='title']")
+	@FindBy(xpath = SEARCHED_FILMS)
 	private List<WebElement> searchedFilms;
 
-	@FindBy(id = "q")
+	@FindBy(id = SEARCHED_FIELD)
 	private WebElement searchField;
 
-	@FindBy(xpath = "/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/*/*/div[@class='movie_cover']/div[@class='nocover']")
+	@FindBy(xpath = FOR_AMOUNT_LINK)
 	private List<WebElement> forAmountFilms;
 
-	@FindBy(xpath = "/html/body/div[@id='container']/div[@id='wrapper']/div[@id='content']/section/div[@id='results']/a[1]")
+	@FindBy(xpath = FIRST_FILM)
 	private WebElement firstFilm;
+
+	@FindBy(id = "login")
+	private List<WebElement> loginForm;
 
 	public InternalPage clickHomePage() {
 		homeLink.click();
@@ -80,6 +94,7 @@ public class InternalPage extends AnyPage {
 
 	public InternalPage clickSearchLink(String title) {
 		pages.internalPage.clickHomePage();
+		clearingSearchField();
 		searchField.click();
 		searchField.sendKeys(title + Keys.ENTER);
 		driver.navigate().refresh();
@@ -99,13 +114,13 @@ public class InternalPage extends AnyPage {
 
 	public void checkAmountAfter() {
 		afterAmountFilms = forAmountFilms.size();
-		System.out.println("NewafterAmountFilms " + afterAmountFilms);
+//		System.out.println("NewafterAmountFilms " + afterAmountFilms);
 	}
 
 	public boolean confirmAmountsAdd() {
 		clearingSearchField();
-		System.out.println("afterAmountFilms " + afterAmountFilms);
-		System.out.println("forAmountFilms " + forAmountFilms.size());
+		// System.out.println("afterAmountFilms " + afterAmountFilms);
+		// System.out.println("forAmountFilms " + forAmountFilms.size());
 		if (afterAmountFilms + 1 == forAmountFilms.size()) {
 			return true;
 		}
@@ -124,6 +139,11 @@ public class InternalPage extends AnyPage {
 		return pages.filmManagementPage;
 	}
 
+	public InternalPage firstFilmTitle(Film film) {
+		film.setTitle(firstFilm.getText());
+		return pages.internalPage;
+	}
+
 	public FilmManagementPage clickToFirstFilm() {
 		firstFilm.click();
 		return pages.filmManagementPage;
@@ -133,9 +153,16 @@ public class InternalPage extends AnyPage {
 		clearingSearchField();
 		driver.navigate().refresh();
 		pages.internalPage.ensurePageLoaded();
-		System.out.println("afterAmountFilms " + afterAmountFilms);
-		System.out.println("forAmountFilms " + forAmountFilms.size());
+		// System.out.println("afterAmountFilms " + afterAmountFilms);
+		// System.out.println("forAmountFilms " + forAmountFilms.size());
 		if (afterAmountFilms - 1 == forAmountFilms.size()) {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean checkIsLoginPage() {
+		if (loginForm.size() > 0) {
 			return true;
 		}
 		return false;

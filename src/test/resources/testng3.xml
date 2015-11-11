@@ -3,13 +3,7 @@
 	preserve-order="true">
 	<test name="Test001_AddFilmValid">
 		<classes>
-			<class name="denis.trening.AddFilmValid">
-			</class>
-		</classes>
-	</test>
-	<test name="Test002_AddFilmInvalid">
-		<classes>
-			<class name="denis.trening.AddFilmInvalid">
+			<class name="denis.trening.SearchNegative">
 			</class>
 		</classes>
 	</test>

@@ -4,7 +4,7 @@ public class Film {
 
 	private String id;
 	private String imdb;
-	private String title;
+	private String title = "";
 	private String year;
 	private String notes;
 	public String getId() {

@@ -11,5 +11,8 @@ public interface FilmHelper {
 	List<Film> search(String title);
 	boolean isFilmAdded(Film film);
 	boolean isFilmDeleted(Film film);
+	void getFirstFilmTitle(Film film);
+	boolean isOnlySerchedInResults(Film film);
+	boolean notFoundResults(Film film);
 
 }

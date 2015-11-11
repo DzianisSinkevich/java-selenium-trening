@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite1]" data-provider-thread-count="1">
-  <test name="Test000_AddFilmValid(failed)">
+  <test name="Test002_AddFilmInvalid(failed)">
     <classes>
-      <class name="denis.trening.DeleteFilm">
+      <class name="denis.trening.AddFilmInvalid">
         <methods>
           <include name="init"/>
           <include name="testUntitled"/>
+        </methods>
+      </class> <!-- denis.trening.AddFilmInvalid -->
+      <class name="denis.trening.AddFilmValid">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis.trening.AddFilmValid -->
+      <class name="denis.trening.SearchNegative">
+        <methods>
+          <include name="init"/>
           <include name="stop"/>
         </methods>
+      </class> <!-- denis.trening.SearchNegative -->
+      <class name="denis.trening.DeleteFilm">
+        <methods>
+          <include name="init"/>
+        </methods>
       </class> <!-- denis.trening.DeleteFilm -->
+      <class name="denis.trening.SearchPositive">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- denis.trening.SearchPositive -->
     </classes>
-  </test> <!-- Test000_AddFilmValid(failed) -->
+  </test> <!-- Test002_AddFilmInvalid(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

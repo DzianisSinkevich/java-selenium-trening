@@ -28,6 +28,7 @@ public class FilmAddPage extends InternalPage {
 	}
 
 	public FilmAddPage setTitleField(String text) {
+		title.click();
 		title.sendKeys(text);
 		return this;
 	}
@@ -37,6 +38,7 @@ public class FilmAddPage extends InternalPage {
 	}
 
 	public FilmAddPage setYearField(String text) {
+		year.click();
 		year.sendKeys(text);
 		return this;
 	}
@@ -47,8 +49,7 @@ public class FilmAddPage extends InternalPage {
 
 	public FilmAddPage ensurePageLoaded() {
 		super.ensurePageLoaded();
-		wait.until(presenceOfElementLocated(By.cssSelector("[name='name']")));
+		wait.until(presenceOfElementLocated(By.cssSelector("[class='addmovie']")));
 		return this;
 	}
-
 }

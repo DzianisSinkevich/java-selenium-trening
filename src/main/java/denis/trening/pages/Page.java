@@ -46,4 +46,8 @@ public abstract class Page {
       return false;
     }
   }
+  
+  public String getPageName(){
+	  return this.getClass().getName();
+  }
 }
